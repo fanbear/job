@@ -1,0 +1,40 @@
+{% block content %}
+
+<div class="blockSixs">
+	<div class="container">
+		<div class="row">
+			{% for advan in advans %}
+			<div class="col-xl-12">
+				<hr><span>преимущества</span>
+				<div class="title">{{ advan.title }}</div>
+				<div class="desc">{{ advan.desc }}</div>
+			</div>
+			{% endfor %}
+			<div class="col-xl-12">
+				<div class="row">
+					{% for item in advan_items %}
+						<div class="col-xl-3 item-wrapper">
+							<span>{{ item.name }}</span>
+							<div class="row">
+								<div class="col-xl-3"><img src="media/{{ item.img }}" alt=""></div>
+								<div class="col-xl-9"><div class="title">{{ item.title }}</div></div>
+								<div class="col-xl-12"><div class="desc"><p>{{ item.desc }}</p></div></div>
+							</div>
+							<div class="col-xl-12">
+								<div class="circle">
+									<div class="bar">
+										<div class="circle-wrapper">
+											<div class="int">{{ item.int_circl }} <span>{{ item.name_circl }}</span></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

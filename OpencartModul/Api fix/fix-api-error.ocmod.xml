@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modification>
+	<name>Fix API error</name>
+	<code>Fix-API-error</code>
+	<version>2</version>
+	<author>opencart2x.ru</author>
+	<link>https://opencart2x.ru</link>
+	
+	<file path="catalog/controller/api/login.php">	
+		<operation error="skip">
+			<search><![CDATA[if (!in_array($this->request->server['REMOTE_ADDR'], $ip_data)) {]]></search>
+			<add position="before"><![CDATA[
+			
+			$ip_data[] = $this->request->server['REMOTE_ADDR'];
+			
+			]]></add>
+		</operation>		
+	</file>
+	
+	<file path="catalog/controller/api/*.php">	
+		<operation error="skip">
+			<search><![CDATA[if (!isset($this->session->data['api_id'])) {]]></search>
+			<add position="replace"><![CDATA[
+			
+			if (isset($this->session->data['opencart2x'])) {
+			
+			]]></add>
+		</operation>		
+	</file>
+	
+</modification>

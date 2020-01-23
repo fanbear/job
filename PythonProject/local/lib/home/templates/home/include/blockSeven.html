@@ -1,0 +1,49 @@
+{% block content %}
+{% for team in teams %}
+	<div class="blockSeven" style="background: url('media/{{ team.img }}')">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-12">
+					<hr><span>команда</span>
+					<div class="title">{{ team.title }}</div>
+					<div class="desc" style="width: {{ team.desc_width }}% ">{{ team.desc }}</div>
+				</div>
+				<div class="col-xl-12">
+					<div class="row">
+						{% for item in team_items %}
+							<div class="col-xl-3">
+								<div class="img-wrapper"><img class="img-fluid" src="media/{{ item.img }}" alt=""></div>
+								<div class="row">
+									<div class="col-xl-7">
+										<div class="name">{{ item.name }}</div>
+										<div class="position">{{ item.position }}</div>
+									</div>
+									<div class="col-xl-5 social-link">
+										<a class="social" href="{{ item.social_inst }}"><i class="fab fa-instagram"></i></a>
+										<a class="social" href="{{ item.social_face }}"><i class="fab fa-facebook-f"></i></a>
+									</div>
+								</div>
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+				<div class="col-xl-12">
+					<div class="button">
+						<a href="{{ team.button_url }}">
+							<span class="right">
+								<span class="line"></span><span class="text-right">перейти</span>
+							</span>
+							<span class="left">
+								<span class="text-left">перейти</span><span class="line"></span>
+
+							</span>
+								
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endfor %}
+
+{% endblock %}

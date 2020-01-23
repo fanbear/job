@@ -1,0 +1,433 @@
+/*
+ * 	Moneymaker 2 Theme Owl Carousel CSS File
+ */
+
+.owl-moneymaker2.owl-carousel {
+    background-color: transparent;
+}
+.owl-moneymaker2.owl-carousel.owl-moneymaker2-slideshow {
+    background-color: #000;
+}
+.owl-moneymaker2.owl-carousel.owl-moneymaker2-slideshow.owl-moneymaker2-slideshow-dark {
+    background-color: #000;
+}
+.owl-moneymaker2.owl-carousel.owl-moneymaker2-slideshow.owl-moneymaker2-slideshow-light {
+    background-color: #fff;
+}
+.owl-moneymaker2-fullscreen .owl-moneymaker2-top {
+    margin-bottom: 0;
+}
+.owl-moneymaker2-fullscreen .owl-moneymaker2-top.owl-moneymaker2-slideshow-border-light {
+    border-bottom: 2px solid #ccc;
+}
+.owl-moneymaker2-fullscreen .owl-moneymaker2-top.owl-moneymaker2-slideshow-border-dark {
+    border-bottom: 2px solid #222;
+}
+
+body.owl-moneymaker2-fullscreen > .container  {
+    margin-top: 20px;
+}
+.owl-moneymaker2-fullscreen .owl-moneymaker2-bottom, .owl-moneymaker2-fullscreen-bottom .owl-moneymaker2-bottom {
+    margin-bottom: 0px;
+}
+.owl-moneymaker2-fullscreen .owl-moneymaker2-bottom.owl-moneymaker2-slideshow-border-light, .owl-moneymaker2-fullscreen-bottom .owl-moneymaker2-bottom.owl-moneymaker2-slideshow-border-light {
+    border-top: 2px solid #ccc;
+}
+.owl-moneymaker2-fullscreen .owl-moneymaker2-bottom.owl-moneymaker2-slideshow-border-dark, .owl-moneymaker2-fullscreen-bottom .owl-moneymaker2-bottom.owl-moneymaker2-slideshow-border-dark {
+    border-top: 2px solid #333;
+}
+body.owl-moneymaker2-fullscreen-bottom footer {
+    margin-top: 0px;
+}
+.owl-moneymaker2-fullscreen .owl-moneymaker2-top .owl-item img, .owl-moneymaker2-fullscreen .owl-moneymaker2-bottom .owl-item img {
+    width: 100%;
+}
+#column-left .owl-moneymaker2.owl-moneymaker2-slideshow,
+#column-right .owl-moneymaker2.owl-moneymaker2-slideshow {
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+#column-left .owl-moneymaker2.owl-moneymaker2-slideshow .owl-pagination,
+#column-right .owl-moneymaker2.owl-moneymaker2-slideshow .owl-pagination {
+    margin-top: 9px;
+}
+#column-left .owl-moneymaker2.owl-moneymaker2-products .owl-pagination,
+#column-right .owl-moneymaker2.owl-moneymaker2-products .owl-pagination,
+#content .owl-moneymaker2.owl-moneymaker2-products .owl-pagination {
+    margin-top: 3px;
+    /*padding-bottom: 4px;*/
+}
+#column-left .owl-moneymaker2.owl-moneymaker2-slideshow .owl-controls .owl-page span,
+#column-right .owl-moneymaker2.owl-moneymaker2-slideshow .owl-controls .owl-page span,
+#column-left .owl-moneymaker2.owl-moneymaker2-products .owl-controls .owl-page span,
+#column-right .owl-moneymaker2.owl-moneymaker2-products .owl-controls .owl-page span,
+#content .owl-moneymaker2.owl-moneymaker2-products .owl-controls .owl-page span {
+    border-radius: 50%;
+}
+.owl-moneymaker2.owl-moneymaker2-slideshow .owl-item img {
+    -webkit-transition: .35s ease-out;
+    transition: .35s ease-out;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0) scale(1.0, 1.0);
+    margin: 0 auto;
+}
+@media all and (-ms-high-contrast:none) { .owl-moneymaker2.owl-moneymaker2-slideshow .owl-item img {transition: none;} *::-ms-backdrop, .owl-moneymaker2.owl-moneymaker2-slideshow .owl-item img {transition: none;} }
+.owl-moneymaker2.owl-moneymaker2-slideshow.owl-moneymaker2-slideshow-trans-hover .owl-item img {
+    opacity: 0.8;
+}
+.owl-moneymaker2.owl-moneymaker2-slideshow.owl-moneymaker2-slideshow-trans-hover .owl-item:hover img {
+    opacity: 1;
+}
+
+.owl-moneymaker2 .owl-wrapper-outer {
+    border: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -o-box-shadow: none;
+    box-shadow: none;
+}
+.owl-moneymaker2.owl-carousel .owl-buttons div {
+    text-shadow: none;
+}
+.owl-moneymaker2.owl-carousel .owl-buttons div i {
+    font-size: 28px !important;
+    margin: -20px 0 0;
+}
+.owl-moneymaker2 .owl-pagination {
+    text-align: center;
+    top: 0px;
+    position: relative;
+}
+.owl-moneymaker2 .owl-controls .owl-page {
+    padding: 0px 4px;
+    margin: 0 0 5px;
+}
+.owl-moneymaker2 .owl-controls .owl-page span {
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 1px;
+    box-shadow: none;
+}
+.owl-moneymaker2 .owl-pagination.background--dark .owl-page span {
+    background: rgb(60, 60, 60);
+    background: rgba(255, 255, 255, 0.2);
+}
+.owl-moneymaker2 .owl-pagination .owl-page span,
+.owl-moneymaker2 .owl-pagination.background--light .owl-page span {
+    background: rgb(210, 210, 210);
+    background: rgba(1, 1, 1, 0.1);
+}
+.owl-moneymaker2 .owl-pagination.background--dark .owl-page.active span {
+    background: rgb(119, 119, 119);
+    background: rgba(255, 255, 255, 0.5);
+}
+.owl-moneymaker2 .owl-pagination .owl-page.active span,
+.owl-moneymaker2 .owl-pagination.background--light .owl-page.active span {
+    background: rgb(160, 160, 160);
+    background: rgba(1, 1, 1, 0.3);
+}
+.owl-moneymaker2 .item-text {
+    z-index: 2;
+}
+.owl-moneymaker2 .item-text > div {
+    font-size: 36px;
+    margin-bottom: 14px;
+    font-weight: 300;
+}
+.owl-moneymaker2 .item-text > p.hidden-xs, .owl-moneymaker2 .item-text > p.hidden-xxs {
+    font-size: 17px;
+}
+.owl-moneymaker2 .item-text > div.spacing, .owl-moneymaker2 .item-text > p.hidden-xs.spacing, .owl-moneymaker2 .item-text > p.hidden-xxs.spacing {
+    letter-spacing: 1px;
+}
+.owl-moneymaker2 .item-text .btn {
+    margin-top: 4px;
+    margin-bottom: -10px;
+}
+.owl-moneymaker2.tilt3d .item-text .btn {
+    margin-top: -11px;
+    margin-bottom: -25px;
+}
+.owl-moneymaker2.tilt3d .item-text .btn-lg {
+    margin-top: -16px;
+}
+.owl-moneymaker2 .item-text {
+    position: absolute;
+}
+.owl-moneymaker2 .item-text.light {
+    color: #fff;
+}
+.owl-moneymaker2 .item-text.dark {
+    color: #111;
+}
+
+.owl-moneymaker2 .item-text.top-center, .owl-moneymaker2 .item-text.middle-center, .owl-moneymaker2 .item-text.bottom-center {
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+.owl-moneymaker2 .item-text.top-left, .owl-moneymaker2 .item-text.top-center, .owl-moneymaker2 .item-text.top-right {top: 10%;}
+.owl-moneymaker2 .item-text.top-left {left: 6%;}
+.owl-moneymaker2 .item-text.top-right {right: 6%}
+.owl-moneymaker2 .item-text.middle-left, .owl-moneymaker2 .item-text.middle-center, .owl-moneymaker2 .item-text.middle-right {
+    -webkit-transform: translateZ(0) translate(0,-50%);
+    -ms-transform: translateZ(0) translate(0,-50%);
+    transform: translateZ(0) translate(0,-50%);
+    top: 50%;
+    margin-top: 5px;
+}
+.owl-moneymaker2 .item-text.middle-left {left: 6%;}
+.owl-moneymaker2 .item-text.middle-right {right: 6%;}
+.owl-moneymaker2 .item-text.bottom-left, .owl-moneymaker2 .item-text.bottom-center, .owl-moneymaker2 .item-text.bottom-right {bottom: 10%;}
+.owl-moneymaker2 .item-text.bottom-left {left: 6%;}
+.owl-moneymaker2 .item-text.bottom-right {right: 6%}
+.owl-carousel .owl-buttons div {
+    opacity: 1;
+}
+.owl-carousel:hover .owl-buttons div {
+    opacity: 1;
+}
+.owl-moneymaker2 .owl-buttons .owl-prev {
+    left: 15px;
+}
+.owl-moneymaker2 .owl-buttons .owl-next {
+    right: 15px;
+}
+.owl-moneymaker2 .owl-buttons .owl-prev, .owl-moneymaker2 .owl-buttons .owl-next {
+    position: absolute;
+    -webkit-transform: translate(0,-50%);
+    -ms-transform: translate(0,-50%);
+    transform: translate(0,-50%);
+    top: 50%;
+    margin-top: -4px;
+    padding: 20px 10px 55px 10px;
+}
+.owl-moneymaker2.owl-moneymaker2-products .owl-buttons .owl-prev, .owl-moneymaker2.owl-moneymaker2-products .owl-buttons .owl-next,
+#column-left .owl-moneymaker2 .owl-buttons .owl-prev, #column-left .owl-moneymaker2 .owl-buttons .owl-next,
+#column-right .owl-moneymaker2 .owl-buttons .owl-prev, #column-right .owl-moneymaker2 .owl-buttons .owl-next,
+#content .owl-moneymaker2 .owl-buttons .owl-prev, #content .owl-moneymaker2 .owl-buttons .owl-next {
+    height: 100%;
+    padding: 20px 0px;
+    width: 25px;
+    margin-top: -1px;
+}
+.owl-carousel.owl-theme:not(.owl-moneymaker2) .owl-prev, .owl-carousel.owl-theme:not(.owl-moneymaker2) .owl-next {
+    -webkit-transform: translate(0,-50%);
+    -ms-transform: translate(0,-50%);
+    transform: translate(0,-50%);
+    text-shadow: 0px 0px 5px #fff;
+    width: 20px;
+    height: 20px;
+}
+.owl-prev, .owl-next {
+    width: 34px;
+    height: 34px;
+}
+span.arrow-left {
+    float: left;
+}
+span.arrow-right {
+    float: right;
+}
+
+span.arrow-left, span.arrow-right {
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgba(51,51,51,.6);
+}
+.owl-moneymaker2.owl-moneymaker2-products .owl-prev > span, .owl-moneymaker2.owl-moneymaker2-products .owl-next > span,
+#column-left .owl-moneymaker2 .owl-prev > span, #column-left .owl-moneymaker2 .owl-next > span,
+#column-right .owl-moneymaker2 .owl-prev > span, #column-right .owl-moneymaker2 .owl-next > span,
+#content .owl-moneymaker2 .owl-prev > span, #content .owl-moneymaker2 .owl-next > span {
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    top: 50%;
+    position: absolute;
+}
+.owl-moneymaker2.owl-moneymaker2-products span.arrow-left, .owl-moneymaker2.owl-moneymaker2-products span.arrow-right,
+#column-left .owl-moneymaker2 span.arrow-left, #column-left .owl-moneymaker2 span.arrow-right,
+#column-right .owl-moneymaker2 span.arrow-left, #column-right .owl-moneymaker2 span.arrow-right,
+#content .owl-moneymaker2 span.arrow-left, #content .owl-moneymaker2 span.arrow-right {
+    border-width: 1px;
+}
+
+.owl-moneymaker2-products .product-thumb {
+    margin-bottom: 0px;
+}
+.owl-moneymaker2-products .product-layout.product-grid {
+    width: 100% !important;
+}
+.owl-prev:hover span.arrow-left, .owl-next:hover span.arrow-right {
+    border-color: #333;
+}
+span.arrow-left.background--dark, span.arrow-right.background--dark {
+    border-color: rgba(255,255,255,.7);
+}
+.owl-prev:hover span.arrow-left.background--dark, .owl-next:hover span.arrow-right.background--dark {
+    border-color: #fff;
+}
+span.arrow-left.background--light, span.arrow-right.background--light {
+    border-color: rgba(51,51,51,.6);
+}
+.owl-prev:hover span.arrow-left.background--light, .owl-next:hover span.arrow-right.background--light {
+    border-color: #333;
+}
+span.arrow-left, span.arrow-right {
+    width: inherit;
+    height: inherit;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+span.arrow-left {
+    border-right: none;
+    border-bottom: none;
+}
+span.arrow-right {
+    border-left: none;
+    border-top: none;
+}
+/*product thumbs*/
+.image-additional .owl-moneymaker2.owl-carousel {
+    background-color: transparent;
+}
+.image-additional .owl-moneymaker2 .owl-pagination {
+    padding-right: 6px;
+}
+.image-additional .owl-moneymaker2 .owl-pagination {
+    margin-top: 3px;
+    margin-bottom: -23px;
+}
+.image-additional .owl-moneymaker2 .owl-controls .owl-page span {
+    border-radius: 50%;
+    background: rgb(210, 210, 210);
+    background: rgba(1, 1, 1, 0.1);
+}
+.image-additional .owl-moneymaker2 .owl-controls .owl-page.active span {
+    background: rgb(160, 160, 160);
+    background: rgba(1, 1, 1, 0.3);
+}
+
+.thumbnails.image-additional > .owl-carousel {
+    margin-bottom: 5px;
+}
+.owl-moneymaker2 .owl-pagination {
+    margin-top: -20px;
+    z-index: 1;
+    position: relative;
+    text-align: center;
+
+    margin-left: auto;
+    margin-right: auto;
+    width: 180px;
+}
+@media (min-width: 768px) {
+.owl-moneymaker2.tilt3d .owl-item > .item {
+    transform-style: preserve-3d;
+    transform: perspective(2000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);
+    will-change: transform;
+}
+.owl-moneymaker2.tilt3d .owl-wrapper .item-text {
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0) scale(1.0, 1.0);
+    transform-style: preserve-3d;
+    transform: scale3d(1, 1, 1);
+    -ms-transform-style: preserve-3d;
+    -ms-transform: scale3d(1, 1, 1);
+    -ms-transform: translateZ(50px);
+}
+
+.owl-moneymaker2.tilt3d .owl-wrapper .item-text > div {
+    -webkit-transform: scale3d(0.66, 0.66, 1);
+    transform: scale3d(0.66, 0.66, 1);
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+.owl-moneymaker2.tilt3d .owl-wrapper .item-text > p.hidden-xs, .owl-moneymaker2.tilt3d .owl-wrapper .item-text > p.hidden-xxs {
+    -webkit-transform: scale3d(0.66, 0.66, 1);
+    transform: scale3d(0.66, 0.66, 1);
+    font-size: 26px;
+}
+
+.owl-moneymaker2.tilt3d .owl-wrapper .item-text > p > a.btn {
+    -webkit-transform: scale3d(0.5, 0.5, 1);
+    transform: scale3d(0.5, 0.5, 1);
+    font-size: 28px;
+    padding: 12px 24px;
+}
+.owl-moneymaker2.tilt3d .owl-wrapper .item-text > p > a.btn-lg {
+    font-size: 36px;
+    padding: 20px 32px;
+}
+.owl-moneymaker2.tilt3d .item-text.top-left, .owl-moneymaker2.tilt3d .item-text.top-center, .owl-moneymaker2.tilt3d .item-text.top-right, .owl-moneymaker2.tilt3d .item-text.bottom-left, .owl-moneymaker2.tilt3d .item-text.bottom-center, .owl-moneymaker2.tilt3d .item-text.bottom-right {
+    -webkit-transform: translateZ(80px);
+    -ms-transform: translateZ(80px);
+    transform: translateZ(80px);
+}
+.owl-moneymaker2.tilt3d .item-text.middle-left, .owl-moneymaker2.tilt3d .item-text.middle-center, .owl-moneymaker2.tilt3d .item-text.middle-right {
+    -webkit-transform: translate3d(0, -50%, 80px);
+    -ms-transform: translate3d(0, -50%, 80px);
+    transform: translate3d(0, -50%, 80px);
+}
+}
+@media (min-width: 992px) {
+    .image-additional .owl-moneymaker2 .owl-item img {
+        margin: 0;
+    }
+}
+@media (max-width: 991px) {
+    .owl-moneymaker2 .owl-wrapper {
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 768px) {
+    .owl-moneymaker2.owl-moneymaker2-products .owl-buttons .owl-prev,
+    #column-left .owl-moneymaker2 .owl-buttons .owl-prev,
+    #column-right .owl-moneymaker2 .owl-buttons .owl-prev,
+    #content .owl-moneymaker2 .owl-buttons .owl-prev {
+        left: -1px;
+        padding-left: 5px;/*new*/
+    }
+    .owl-moneymaker2.owl-moneymaker2-products .owl-buttons .owl-next,
+    #column-left .owl-moneymaker2 .owl-buttons .owl-next,
+    #column-right .owl-moneymaker2 .owl-buttons .owl-next,
+    #content .owl-moneymaker2 .owl-buttons .owl-next {
+        right: -1px;
+    }
+}
+@media (max-width: 767px) {
+    .owl-moneymaker2 .item-text .btn {
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+    }
+    .owl-moneymaker2 .item-text > div {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    .owl-moneymaker2 .item-text.top-left, .owl-moneymaker2 .item-text.top-center, .owl-moneymaker2 .item-text.top-right, .owl-moneymaker2 .item-text.middle-left, .owl-moneymaker2 .item-text.middle-right, .owl-moneymaker2 .item-text.bottom-left, .owl-moneymaker2 .item-text.bottom-center, .owl-moneymaker2 .item-text.bottom-right {
+        left: 0;
+        right: 0;
+        -webkit-transform: translate(0,-50%);
+        -ms-transform: translate(0,-50%);
+        transform: translate(0,-50%);
+        top: 50%;
+        margin-top: 5px;
+    }
+    .owl-moneymaker2-products {
+        padding: 0 15px;
+    }
+}
+@media (max-width: 560px) {
+    .owl-moneymaker2 .item-text > div {
+        font-size: 25px;
+    }
+}

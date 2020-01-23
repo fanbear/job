@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+	<name>Missing Cart</name>
+	<code>Missing-Cart</code>
+	<version>1.0</version>
+	<author>opencart2x.ru</author>
+	<link>https://opencart2x.ru</link>
+	<file path="catalog/controller/checkout/cart.php">
+		<operation>
+			<search><![CDATA[public function index() {]]></search>
+			<add position="after"><![CDATA[		
+			if ($this->cart->hasProducts()){
+				$this->response->redirect($this->url->link('checkout/checkout'));
+			}
+            ]]></add>
+		</operation>
+	</file>
+</modification>

@@ -1,0 +1,363 @@
+@import "vars"
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,500i,700,700i,900,900i')
+
+body
+	font-family: 'Roboto', sans-serif
+	background-color: white
+html
+	font-family: 'Roboto', sans-serif
+
+
+// Шапка сайта и главный экран
+.header
+	padding-top: 35px
+	background: url('../img/first-widnow-bg.jpg')
+	background-position: center
+	background-size: cover
+	height: auto
+	.menu
+		height: 20px
+		a
+			display: inline-block
+			margin-right: 60px
+			font-size: 14px
+			color: white
+			&:hover
+				text-decoration: none
+				border-bottom: 2px solid #2f7cd2
+	.phone
+		position: relative
+		a
+			color: white
+			font-size: 14px
+			text-decoration: none
+			&:before
+				display: inline-block
+				content: ''
+				background: url('../img/phone.png')
+				width: 44px
+				height: 44px
+				position: absolute
+				left: -55px
+				top: -8px
+	.head-button
+		a
+			color: white
+			font-size: 14px
+			padding: 15px 30px
+			background: #1a1a1a
+			text-decoration: none
+			border-radius: 20px
+.header-wrapper
+	margin-top: 60px
+	.video
+		margin-bottom: 25px
+	.h-text
+		padding-left: 20px
+		border-left: 3px solid #2f7cd2
+		h1
+			font-size: 48px
+			color: white
+			font-weight: 300
+		h2
+			font-size: 36px
+			font-weight: 300
+			color: white
+	.text-1
+		p
+			margin-top: 35px
+			color: white
+			font-size: 18px
+	.button-curs
+		margin-top: 35px
+		width: 100%
+		height: 45px
+		background: #2f7cd2
+		border-radius: 20px
+		text-align: center
+		transition: 1ss ease-out
+		a
+			font-size: 16px
+			color: white
+			line-height: 45px
+			text-align: center
+			text-transform: uppercase
+			text-decoration: none
+		&:hover
+			background: transparent
+			border: 2px solid #2f7cd2
+			transition: 0.4s ease-out
+			a
+				line-height: 42px
+////
+
+
+// Красная линия
+.red-line
+	height: 10px
+	background: #c72926
+//
+// 
+
+// Блок ОБО мне
+.about
+	padding-bottom: 50px
+.about-block
+	margin-top: 16px
+.block-wrapper
+	padding-top: 30px
+	text-align: center
+	height: 160px
+	background: #2f7cd2
+	p:first-of-type
+		color: white
+		font-size: 30px
+		margin-top: 25px
+		line-height: 0
+	p:last-of-type
+		color: white
+		font-size: 15px
+.about-me
+	p
+		text-align: center
+		font-size: 36px
+		color: black
+		margin-top: 38px
+		&:after
+			display: block
+			content: ''
+			background: url('../img/about-line.png')
+			width: 40px
+			height: 3px
+			position: relative
+			top: 8px
+			margin: 0 auto
+.about-wrapper
+	margin-top: 50px
+	.text
+		p
+			font-size: 18px
+			line-height: 25px
+			color: #272727
+	.undertext
+		position: relative
+		b
+			font-size: 18px
+			margin-bottom: 20px
+			color: #272727
+		p
+			font-size: 18px
+			line-height: 25px
+			color: #272727
+			padding-left: 40px
+			&:nth-child(1)
+				padding-left: 0
+				&:before
+					display: none
+			&:before
+				display: block
+				content: ''
+				background: url('../img/undertext.png')
+				width: 14px
+				height: 10px
+				position: absolute
+				left: 15px
+				margin-top: 8px
+
+	.image
+		img
+			margin-bottom: 25px
+// 
+// 
+// Видеокурсы
+.number-1
+	padding-top: 70px
+	padding-bottom: 70px
+	background: url('../img/number-1-bg.jpg')
+	background-position: center
+	background-size: cover
+	.text-1
+		margin-bottom: 55px
+		p:first-of-type
+			font-size: 32px
+			text-transform: uppercase
+			color: white
+		p:last-of-type
+			font-size: 26px
+			color: white
+			text-transform: uppercase
+	.text-2
+		p
+			font-size: 22px
+			font-weight: 300
+			color: white
+		.undertext
+			margin-top: 30px
+			position: relative
+			p
+				font-size: 18px
+				line-height: 25px
+				color: white
+				padding-left: 40px
+				&:before
+					display: block
+					content: ''
+					background: url('../img/undertext.png')
+					width: 14px
+					height: 10px
+					position: absolute
+					left: 15px
+					margin-top: 8px
+	#subscribe-1
+		input
+			background: #121212
+			color: #a6a6a6
+			border: 0
+			width: 100%
+			height: 40px
+			padding-left: 20px
+			border-radius: 20px
+		.button-sub
+			color: white
+			font-size: 14px
+			height: 40px
+			line-height: 40px
+			background: #2f7cd2
+			text-align: center
+			border-radius: 20px
+			img
+				position: relative
+				top: -1px
+				left: -5px
+	.video-text
+		p
+			font-size: 46px
+			color: white
+.number-2
+	background: #f7f7f7
+	padding-top: 70px
+	padding-bottom: 70px
+	.text-1
+		margin-bottom: 55px
+		p:first-of-type
+			font-size: 32px
+			text-transform: uppercase
+			color: #262626
+		p:last-of-type
+			font-size: 26px
+			color: #262626
+			text-transform: uppercase
+	.text-2
+		p
+			font-size: 22px
+			font-weight: 300
+			color: #262626
+		.undertext
+			margin-top: 30px
+			position: relative
+			p
+				font-size: 18px
+				line-height: 25px
+				color: #262626
+				padding-left: 40px
+				&:before
+					display: block
+					content: ''
+					background: url('../img/undertext.png')
+					width: 14px
+					height: 10px
+					position: absolute
+					left: 15px
+					margin-top: 8px
+	#subscribe-2
+		input
+			background: #e3e3e3
+			color: #a6a6a6
+			border: 0
+			width: 100%
+			height: 40px
+			padding-left: 20px
+			border-radius: 20px
+		.button-sub
+			color: white
+			font-size: 14px
+			height: 40px
+			line-height: 40px
+			background: #2f7cd2
+			text-align: center
+			border-radius: 20px
+			img
+				position: relative
+				top: -1px
+				left: -5px
+	.video-text
+		p
+			font-size: 46px
+			color: #262626
+// 
+// 
+// Новосная рассылка
+.newsletter
+	background: url('../img/newsletter-bg.jpg')
+	background-size: cover
+	background-position: center
+	padding-top: 40px
+	padding-bottom: 20px
+	.text-1
+		p:first-of-type
+			font-size: 36px
+			color: white
+			text-align: center
+			line-height: 9px
+		p:last-of-type
+			font-size: 32px
+			color: white
+			text-align: center
+	.undertext
+		position: relative
+		.left
+			padding-left: 60px
+			p
+				font-size: 18px
+				color: white
+				&:before
+					display: block
+					content: ''
+					background: url('../img/newsletter-arrow.png')
+					width: 26px
+					height: 21px
+					position: absolute
+					left: 20px
+					margin-top: 2px
+				&:first-of-type
+					padding-bottom: 24px
+		.right
+			padding-right: 60px
+			p
+				font-size: 18px
+				color: white
+				&:before
+					display: block
+					content: ''
+					background: url('../img/newsletter-arrow.png')
+					width: 26px
+					height: 21px
+					position: absolute
+					left: -20px
+					margin-top: 2px
+.newsleter-form
+	height: 100px
+	background: #121212
+	.newsletter-button
+		cursor: pointer
+		background: white
+		height: 40px
+		border-radius: 20px
+		width: 100%
+		text-align: center
+		p
+			line-height: 40px
+			font-size: 14px
+			text-transform: uppercase
+
+

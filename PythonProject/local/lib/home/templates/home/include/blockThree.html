@@ -1,0 +1,54 @@
+{% block content%}
+	{% for servis in services %}
+		<div class="blockThree" style="background: url(media/{{ servis.bg_image }})">
+			<div class="container">
+				<div class="row">
+					
+						<div class="col-xl-4 titel-servis">
+							<hr><span>Web Heaven</span>
+							<div class="title">
+								{{ servis.common_title }}
+							</div>
+							<div class="desc">{{ servis.common_desc }}</div>
+						</div>
+						<div class="col-xl-4 servis-item">
+							<div class="title">{{ servis.s_one_title }}</div>
+							<div class="desc">{{ servis.s_one_desc }}</div>
+							<div class="button">
+								<a href="{{ servis.s_one_url }}">Перейти <span></span></a>
+							</div>
+						</div>
+						<div class="col-xl-4 servis-item">
+							<div class="title">{{ servis.s_two_title }}</div>
+							<div class="desc">{{ servis.s_two_desc }}</div>
+							<div class="button">
+								<a href="{{ servis.s_two_url }}">Перейти <span></span></a>
+							</div>
+						</div>
+						<div class="col-xl-4 servis-item">
+							<div class="title">{{servis.s_three_title}}</div>
+							<div class="desc">{{ servis.s_three_desc }}</div>
+							<div class="button">
+								<a href="{{ servis.s_three_url }}">Перейти <span></span></a>
+							</div>
+						</div>
+						<div class="col-xl-4 servis-item">
+							<div class="title">{{servis.s_four_title}}</div>
+							<div class="desc">{{ servis.s_four_desc }}</div>
+							<div class="button">
+								<a href="{{ servis.s_four_url }}">Перейти <span></span></a>
+							</div>
+						</div>
+						<div class="col-xl-4 servis-item">
+							<div class="title">{{servis.s_five_title}}</div>
+							<div class="desc">{{ servis.s_five_desc }}</div>
+							<div class="button">
+								<a href="{{ servis.s_five_url }}">Перейти <span></span></a>
+							</div>
+						</div>
+					
+				</div>
+			</div>
+		</div>
+	{% endfor %}
+{% endblock%}

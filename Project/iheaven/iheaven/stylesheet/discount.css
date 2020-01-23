@@ -1,0 +1,23 @@
+.discount{
+	background: url('../image/discount.png') no-repeat;
+	background-size: 100px 100px;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	top:-15px;
+	right:0;
+	color: #fff;
+	text-align: center;
+	font-weight:bold;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+	transform: rotate(-27deg);
+	z-index: 100;
+}
+.discount p:first-child{
+	font-size: 14px;
+	margin-top: 25px;
+	margin-bottom:1px;
+}
+.discount p:last-child{
+	font-size: 24px;		
+}

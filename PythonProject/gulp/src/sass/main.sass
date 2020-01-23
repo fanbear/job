@@ -1,0 +1,699 @@
+﻿@import "vars"
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap')
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800&display=swap')
+
+
+
+body
+	font-family: 'Roboto', sans-serif;
+// Хидер сайта + меню
+.header-block
+	position: fixed
+	z-index: 9999
+	top: 0
+	color: white
+	width: 100%
+	height: 60px
+	background: black
+	.logo
+		position: relative
+		img
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			margin: auto
+	.menu
+		ul
+			padding: 0
+			margin: 0
+			li
+				display: inline
+				padding-right: 15px
+				a
+					color: #ffffff
+					font-size: 15px
+					font-family: 'Roboto', sans-serif;
+					font-weight: 400
+					text-transform: uppercase
+					text-decoration: none
+					line-height: 60px
+					&:hover
+						border-bottom: 2px solid #d60000
+	.top-phone
+		padding-top: 10px
+		a
+			color: #ffffff
+			font-size: 16px
+			font-weight: 600
+			text-align: center
+			display: block
+
+		span
+			color: #a6a6a6
+			font-size: 10px
+			padding: 0
+			padding-left: 10px
+			display: block
+			text-align: center
+			position: relative
+			right: -20px
+	.top-button
+		.callback
+			margin-top: 7.5px
+			cursor: pointer
+			background: #d60000
+			width: 200px
+			height: 44px
+			text-align: center
+			border-radius: 22px
+			color: white
+			line-height: 44px
+			text-align: center
+			&:hover
+				box-shadow: 0 0 20px 1px #d60000
+
+
+//Первый блок
+.home-one
+	padding-top: 120px
+	padding-bottom: 135px
+	background: black
+	h1
+		color: white
+		font-size: 36px
+		width: 90%
+		text-transform: uppercase
+	span
+		color: #d60000
+		font-size: 10px
+		text-transform: uppercase
+		font-weight: bold
+		position: relative
+		top: -15px
+	p
+		color: white
+		font-size: 14px
+		width: 80%
+		padding-top: 15px
+		padding-bottom: 30px
+	.buttonOne
+		width: 180px
+		height: 44px
+		border-radius: 22px
+		background: #d60000
+		text-align: center
+		cursor: pointer
+		a
+			color: white
+			font-size: 14px
+			text-transform: uppercase
+			text-align: center
+			line-height: 44px
+			font-weight: 400
+			text-decoration: none
+		&:hover
+			box-shadow: 0 0 20px 1px #d60000
+	.buttonTwo
+		width: 180px
+		height: 44px
+		border-radius: 22px
+		background: white
+		text-align: center
+		cursor: pointer
+		a
+			color: black
+			font-size: 14px
+			text-transform: uppercase
+			text-align: center
+			line-height: 44px
+			font-weight: 400
+			text-decoration: none
+		&:hover
+			box-shadow: 0 0 20px 1px #d60000
+	.wrapper
+		position: relative
+		z-index: 200
+
+
+.home-work
+	padding-top: 50px
+	padding-bottom: 80px
+	h2
+		font-size: 32px
+		font-weight: 900
+	.desc-top
+		font-size: 16px
+		padding-top: 20px
+		padding-bottom: 20px
+		color: black
+	.step
+		p
+			font-size: 16px
+			margin-left: 25px
+			position: relative
+			&:before
+				display: inline-block
+				position: absolute
+				left: -25px
+				top: 28px
+				content: ""
+				border-top: .1rem solid #d60000
+				width: 10px
+				transform: translateY(-1rem)
+	.desc-bottom
+		font-size: 16px
+		color: black
+		padding-top: 20px
+	hr
+		width: 55px
+		height: 1px 
+		background: #d60000
+		display: inline-block
+		position: relative
+		top: -2px
+		margin: 0
+	span
+		color: #d60000
+		display: inline-block
+		text-transform: uppercase
+		font-size: 10px
+		font-weight: bold
+		margin-left: 5px
+	.works
+		height: 170px
+		span
+			color: #f7f7f7
+			font-size: 90px
+			line-height: 100px
+	.image
+		.img-wrapper
+			height: 100px
+			position: relative
+			img
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				margin: auto
+
+
+.blockThree
+	background-position: center !important
+	background-size: cover !important
+	background-attachment: fixed !important
+	padding-top: 70px
+	background: black
+	padding-bottom: 15px
+	.titel-servis
+		padding-bottom: 65px
+		.title
+			color: white
+			font-family: 'Raleway', sans-serif;
+			font-size: 30px
+			text-transform: uppercase
+			font-weight: 800
+		.desc
+			padding-top: 25px
+			color: white
+			font-size: 14px
+	.servis-item
+		padding-bottom: 65px
+		.title
+			color: white
+			font-family: 'Raleway', sans-serif;
+			font-size: 30px
+			text-transform: uppercase
+			font-weight: 800
+			padding-left: 10px
+			&:before
+				display: inline-block
+				content: ""
+				border: 1px solid white
+				background: white
+				width: 4
+				height: 40px
+				position: relative
+				top: 10px
+				left: -10px
+		.desc
+			padding-top: 25px
+			color: white
+			font-size: 14px
+		.button
+			padding-top: 20px
+			a
+				color: #d60000
+				font-size: 10px
+				text-transform: uppercase
+				span
+					position: relative
+					top: -2px
+					padding-left: 10px
+					width: 70px
+					background: #d60000
+					height: 2px
+					transition: 0.6s ease-out
+				&:hover
+					span
+						width: 220px
+						transition: 0.6s ease-out
+	hr
+		width: 55px
+		height: 1px 
+		background: #d60000
+		display: inline-block
+		position: relative
+		top: -2px
+		margin: 0
+	span
+		color: #d60000
+		display: inline-block
+		text-transform: uppercase
+		font-size: 10px
+		font-weight: bold
+		margin-left: 5px
+
+
+.blockFour
+	padding: 65px 0
+	.tumb
+		padding: 5px
+	.title
+		font-size: 30px
+		color: black
+	.desc
+		padding: 30px 0
+		color: black
+		font-size: 14px
+	.item-wrapper
+		height: 320px
+		position: relative
+		background-position: center !important
+		background-size: cover !important
+		padding: 5px
+		background-repeat: no-repeat !important
+		background-size: cover !important
+		.color-wrapper
+			opacity: 0
+			transform: rotateX(70deg)
+			transition: 0.7s ease-out
+			height: 310px
+			padding-left: 40px
+			padding-top: 60px
+			.title
+				color: white
+				font-family: 'Raleway', sans-serif;
+				font-size: 22px
+				text-transform: uppercase
+				font-weight: 600
+				padding-left: 10px
+				&:before
+					display: inline-block
+					content: ""
+					border: 1px solid white
+					background: white
+					width: 4
+					height: 30px
+					position: relative
+					top: 5px
+					left: -10px
+			.desc
+				font-size: 14px
+				color: white
+				width: 80%
+			.button
+				text-transform: uppercase
+				font-size: 10px
+				a
+					color: white
+					span
+						position: relative
+						top: -2px
+						margin-left: 10px
+						width: 70px
+						background: white
+						height: 2px
+						transition: 0.6s ease-out
+					&:hover
+						span
+							width: 220px
+							transition: 0.6s ease-out
+			&:hover
+				opacity: 1
+				transform: rotate(0)
+				transition: 0.7s ease-out
+	.btn-pr
+		margin: 0 auto
+		margin-top: 40px
+		text-align: center
+		background: #d60000
+		border-radius: 22px
+		width: 200px
+		transition: 0.3s ease-out
+		height: 44px
+		cursor: pointer
+		a
+			color: white
+			line-height: 44px
+			font-size: 14px
+			text-transform: uppercase
+			text-decoration: none
+		&:hover
+			box-shadow: 0 0 15px 1px #d60000
+			transition: 0.3s ease-out
+			
+	hr
+		width: 55px
+		height: 1px 
+		background: #d60000
+		display: inline-block
+		position: relative
+		top: -2px
+		margin: 0
+	span
+		color: #d60000
+		display: inline-block
+		text-transform: uppercase
+		font-size: 10px
+		font-weight: bold
+		margin-left: 5px
+
+
+.blockFive
+	background-repeat: no-repeat !important
+	background-size: cover !important
+	background-position: center !important
+	background-attachment: fixed !important
+	padding: 65px 0
+	.title
+		color: white
+		font-size: 30px
+		font-family: 'Raleway', sans-serif;
+		font-weight: bold
+		text-transform: uppercase
+	.desc
+		padding: 30px 0
+		color: white
+		font-size: 14px
+	.reviews-item
+		.img
+			background-size: cover !important
+			background-position: center !important
+			width: 59px
+			height: 59px
+			border-radius: 50%
+		.fln
+			margin-top: 8px
+			color: white
+			font-size: 19px
+			text-transform: uppercase
+			font-family: 'Raleway', sans-serif
+			font-weight: 800
+		.position
+			color: #a6a6a6
+			font-size: 10
+			text-transform: uppercase
+			font-family: 'Raleway', sans-serif
+		.desc
+			font-size: 14px
+			color: white
+			height: 110px
+			overflow: hidden
+			padding: 0 15px
+			padding-right: 60px
+			margin-top: 30px
+			margin-bottom: 10px
+		.social-wrapper
+			text-align: center
+			.social
+				i
+					color: #d60000
+					font-size: 14px
+					height: 30px
+					width: 30px
+					line-height: 30px
+					background: white
+					border-radius: 50%
+					transition: 0.4s ease-out
+				&:hover
+					i
+						background: transparent
+						border: 1px solid white
+						transition: 0.4s ease-out
+		.button
+			font-size: 10px
+			margin-top: 10px
+			a
+				color: #d60000
+				text-transform: uppercase
+				font-weight: 700
+				span
+					position: relative
+					display: inline-block
+					top: -2px
+					margin-left: 10px
+					width: 40px
+					background: #d60000
+					height: 2px
+					transition: 0.6s ease-out
+				&:hover
+					span
+						width: 100px
+						transition: 0.6s ease-out
+	.rev-btn
+		margin: 0 auto
+		margin-top: 40px
+		text-align: center
+		background: #d60000
+		border-radius: 22px
+		width: 200px
+		height: 44px
+		transition: 0.3s ease-out
+		cursor: pointer
+		a
+			color: white
+			line-height: 44px
+			font-size: 14px
+			text-transform: uppercase
+			text-decoration: none
+		&:hover
+			box-shadow: 0 0 15px 1px #d60000
+			transition: 0.3s ease-out
+	hr
+		width: 55px
+		height: 1px 
+		background: #d60000
+		display: inline-block
+		position: relative
+		top: -2px
+		margin: 0
+	span
+		color: #d60000
+		display: inline-block
+		text-transform: uppercase
+		font-size: 10px
+		font-weight: bold
+		margin-left: 5px
+	
+
+.blockSixs
+	padding-top: 60px
+	padding-bottom: 60px
+	
+	.title
+		margin-bottom: 20px
+		color: black
+		font-size: 30px
+		font-family: 'Raleway', sans-serif;
+		font-weight: bold
+		text-transform: uppercase
+	.item-wrapper
+		span
+			color: #d60000
+			font-size: 10px
+			font-weight: 700
+			text-transform: uppercase
+			margin: 0
+			margin-bottom: 10px
+		img
+			margin: 5px
+			padding: 8px
+			box-shadow: 0 0 15px 0 #d6000038
+			border-radius: 10px
+		.title
+			font-size: 18px
+		.desc
+			p
+				font-size: 14px
+				text-transform: none
+	.circle
+		width: 160px
+		height: 160px
+		border-radius: 50%
+		box-shadow: 0 0 25px 0 #0003
+		border: 10px solid white
+		margin: 10px
+		.bar
+			width: 100%
+			height: 100%	
+			box-shadow: 0 0 1px black
+			border-radius: 50%
+			padding: 5px
+			background: #d60000
+			.circle-wrapper
+				width: 100%
+				height: 100%	
+				box-shadow: 0 0 1px black
+				border-radius: 50%
+				background: white
+				text-align: center
+				position: relative
+				.int
+					font-size: 30px
+					color: #464646
+					font-weight: 700
+					padding-top: 30px
+					span
+						font-size: 10px
+						color: #464646
+	hr
+		width: 55px
+		height: 1px 
+		background: #d60000
+		display: inline-block
+		position: relative
+		top: -2px
+		margin: 0
+	span
+		color: #d60000
+		display: inline-block
+		text-transform: uppercase
+		font-size: 10px
+		font-weight: bold
+		margin-left: 5px
+
+
+.blockSeven
+	padding-top: 60px
+	padding-bottom: 60px
+	background-size: cover !important
+	background-position: center !important
+	background-repeat: no-repeat !important
+	.title
+		color: white
+		font-size: 30px
+		font-family: 'Raleway', sans-serif;
+		font-weight: bold
+		text-transform: uppercase
+	.desc
+		padding: 20px 0
+		color: white
+		font-size: 14px
+	.img-wrapper
+		width: 254px
+		margin-bottom: 10px
+		img
+			border-radius: 12px
+	.name
+		color: white
+		text-transform: uppercase
+		font-size: 19px
+	.position
+		font-size: 10px
+		color: #a6a6a6
+		text-transform: uppercase
+	.social-link
+		text-align: right
+	.social
+		text-align: center
+		i
+			color: #d60000
+			font-size: 14px
+			height: 35px
+			width: 35px
+			line-height: 35px
+			background: white
+			border-radius: 50%
+			transition: 0.4s ease-out
+		&:hover
+			i
+				background: transparent
+				border: 1px solid white
+				transition: 0.4s ease-out
+	.button
+		text-align: center
+		margin-top: 60px
+		a
+			text-decoration: none
+			span
+				color: white
+				font-size: 12px
+				text-transform: uppercase
+			.right
+				margin-right: 10px
+				margin-right: 10px
+			.left
+				margin-left: 10px
+			.text-right
+				margin-left: 15px
+			.text-left
+				margin-right: 15px
+			.line
+				margin: 0 !important
+				position: relative
+				display: inline-block
+				top: -5px
+				margin-left: 10px
+				width: 60px
+				background: white
+				height: 2px
+				transition: 0.6s ease-out
+			&:hover
+				.line
+					width: 180px
+					transition: 0.6s ease-out
+	hr
+		width: 55px
+		height: 1px 
+		background: #d60000
+		display: inline-block
+		position: relative
+		top: -2px
+		margin: 0
+	span
+		color: #d60000
+		display: inline-block
+		text-transform: uppercase
+		font-size: 10px
+		font-weight: bold
+		margin-left: 5px
+
+
+
+
+//Футер сайта
+
+footer
+	background-position: center !important
+	background-size: cover !important
+	background-repeat: no-repeat !important
+	h1
+		color: white
+	.left-side
+		padding-top: 80px
+		padding-bottom: 60px
+		.l-desc
+			color: #a6a6a6
+			font-size: 14px
+			width: 90%
+			padding-bottom: 10px
+			padding-top: 10px
+		.fab
+			color: #a6a6a6
+			background: black
+			border-radius: 50%
+			padding: 10px
+			margin-right: 10px

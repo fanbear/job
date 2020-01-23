@@ -1,0 +1,38 @@
+{% block content %}
+{% for review in reviews %}
+	<div class="blockFive" style="background: url('media/{{ review.img_bg }}')">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-12">
+					<hr><span>Отзывы</span>
+					<div class="title">{{ review.title }}</div> 
+					<div class="desc" style='width: {{ review.desc_width }}%'>{{ review.desc }}</div>
+				</div>
+				<div class="col-xl-12 reviews-item">
+					<div class="row">
+						{% for item in rev_items %}
+							<div class="col-xl-4">
+								<div class="row">
+									<div class="col-xl-3"><div class="img" style="background: url('media/{{ item.img }}')"></div></div>
+									<div class="col-xl-9" style="padding: 0">
+										<div class="fln">{{ item.fln }}</div>
+										<div class="position">{{ item.position}}</div>
+									</div>
+									<div class="col-xl-12 desc"><p>{{ item.review }}</p></div>
+									<div class="col-xl-2 social-wrapper"><a class="social" href="{{ item.awesome_url }}"> <i class="fab {{ item.awesome }}"></i></a></div>
+									<div class="col-xl-10" style="padding: 0">
+										<div class="button">
+											<a href="{{ item.button_url }}"> {{ item.button_name }} <span></span> </a>
+										</div>
+									</div>
+								</div>
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+				<div class="col-xl-12"><div class="rev-btn"><a href="{{ review.btn_url }}">ВСЕ ОТЗЫВЫ</a></div></div>
+			</div>
+		</div>
+	</div>
+{% endfor %}
+{% endblock %}

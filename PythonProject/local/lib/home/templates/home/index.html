@@ -1,0 +1,13 @@
+{% extends 'home/home_template.html' %}
+
+{% block title %}{% for tag in tags%}{{ tag.title }}{% endfor%}{% endblock %} {# Заголовог сайта #}
+{% block description %}{% for tag in tags%}{{ tag.description }}{% endfor %}{% endblock %} {# Описание сайта сайта #}
+
+
+{% block section-1 %}{% include 'home/include/blockOne.html' %}{% endblock section-1 %}
+{% block section-2 %}{% include 'home/include/blockTwo.html' %}{% endblock section-2 %}
+{% block section-3 %}{% include 'home/include/blockThree.html' %}{% endblock section-3 %}
+{% block section-4 %}{% include 'home/include/blockFour.html' %}{% endblock section-4 %}
+{% block section-5 %}{% include 'home/include/blockFive.html' %}{% endblock section-5 %}
+{% block section-6 %}{% include 'home/include/blockSixs.html' %}{% endblock section-6 %}
+{% block section-7 %}{% include 'home/include/blockSeven.html' %}{% endblock section-7 %}

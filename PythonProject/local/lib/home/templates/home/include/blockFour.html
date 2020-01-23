@@ -1,0 +1,32 @@
+{% block content %}
+	<div class="blockFour">
+		<div class="container">
+			<div class="row">
+				{% for pr in prs %}
+					<div class="col-xl-12">
+						<hr><span>Web Heaven</span>
+						<div class="title">{{ pr.title }}</div> 
+						<div class="desc" style='width: {{ pr.desc_width }}%'>{{ pr.desc }}</div>
+					</div>
+					{% for img_set in pr_imgs %}
+						<div class="col-xl-4 tumb" >
+							<div class="item-wrapper" style="background: url('media/{{ img_set.img }}')">
+									<div class="color-wrapper" style="background: {{ img_set.item_color }}">
+										<div class="title">{{ img_set.item_title }}</div>
+										<div class="desc">{{ img_set.item_desc }}</div>
+										<div class="button">
+											<a href="{{ img_set.button_url }}">перейти<span></span></a>
+										</div>
+									</div>
+								
+							</div>
+						</div>
+					{% endfor %}
+					<div class="col-xl-12">
+						<div class="btn-pr"><a href="{{ pr.button_url }}">Все портфолио</a></div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modification>
+  <name>Quick view PRO</name>
+  <code>Quick View PRO</code>
+  <version>QV - 2302</version>
+  <author>Quick view - 29aleksey</author>
+  <file path="catalog/view/theme/*/template/common/header.tpl">
+	<operation>
+      <search>
+        <![CDATA[
+		<?php foreach ($styles as $style) { ?>
+		]]>
+      </search>
+      <add position="before">
+        <![CDATA[
+<link href="catalog/view/javascript/jquery/magnific/magnific-popup.css" rel="stylesheet" media="screen" />
+<link href="catalog/view/theme/default/stylesheet/quickview.css" rel="stylesheet" media="screen" />
+<script src="catalog/view/javascript/jquery/magnific/jquery.magnific-popup.min.js" type="text/javascript"></script>
+<link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+var ajax_loader = '<i style="font-size:50px;" class="fa fa-spinner fa-pulse"></i>';
+function creatOverlayLoadPage(action) {
+	if (action) {
+		$('#messageLoadPage').html(ajax_loader);
+		$('#messageLoadPage').show();
+	} else {
+		$('#messageLoadPage').html('');
+		$('#messageLoadPage').hide();
+	}
+}
+function quickview_open(id) {
+$('body').prepend('<div id="messageLoadPage"></div><div class="mfp-bg-quickview"></div>');
+	$.ajax({
+		type:'post',
+		data:'quickview29=1',
+		url:'index.php?route=product/product&product_id='+id,	
+		beforeSend: function() {
+			creatOverlayLoadPage(true); 
+		},
+		complete: function() {
+			$('.mfp-bg-quickview').hide();
+			$('#messageLoadPage').hide();
+			creatOverlayLoadPage(false); 
+		},									
+		success:function (data) {
+			$('.mfp-bg-quickview').hide();
+			$data = $(data);
+			var new_data = $data.find('#quickview-container').html();							
+			$.magnificPopup.open({
+				tLoading: '<span><i style="font-size:50px;" class="fa fa-spinner fa-pulse"></i></span>',
+				items: {
+					src: new_data,
+					},
+				type: 'inline'
+			});
+		}
+	});							
+}
+</script>
+<script>
+$(document).ready(function() {
+		var quickview = $(".quickview").parent().addClass('quickview-cont');		
+	});
+</script>
+		]]>
+      </add>
+    </operation>
+  </file>
+  <file path="catalog/controller/product/product.php">
+	<operation>
+      <search>
+        <![CDATA[$this->response->setOutput($this->load->view('product/product', $data));]]>
+      </search>
+      <add position="before">
+        <![CDATA[
+			if(isset($this->request->post['quickview29'])) {
+			$this->load->language('extension/module/quickviewpro');
+			$data['button_review'] = $this->language->get('button_review');
+			$data['tab_general_quickview'] = $this->language->get('tab_general_quickview');
+			$data['quantity_prod'] = $product_info['quantity'];
+			$data['on_off_quickview_additional_image'] = $this->config->get('config_quickview_additional_image');
+			$data['on_off_quickview_addtocart'] = $this->config->get('config_quickview_addtocart');
+			$data['on_off_quickview_wishlist'] = $this->config->get('config_quickview_wishlist');
+			$data['on_off_quickview_compare'] = $this->config->get('config_quickview_compare');
+			$data['on_off_quickview_tab_description'] = $this->config->get('config_quickview_tab_description');
+			$data['on_off_quickview_tab_specification'] = $this->config->get('config_quickview_tab_specification');
+			$data['on_off_quickview_tab_review_quickview'] = $this->config->get('config_quickview_tab_review_quickview');
+			$data['on_off_quickview_options_count'] = $this->config->get('config_quickview_options_count');
+			$data['on_off_quickview_manufacturer'] = $this->config->get('config_quickview_manufacturer');
+			$data['on_off_quickview_model'] = $this->config->get('config_quickview_model');
+			$data['on_off_quickview_quantity'] = $this->config->get('config_quickview_quantity');
+			
+			
+			$data['config_quickview_background_btnaddtocart'] = $this->config->get('config_quickview_background_btnaddtocart');
+			$data['config_quickview_textcolor_btnaddtocart'] = $this->config->get('config_quickview_textcolor_btnaddtocart');
+			$data['config_quickview_background_btnwishlist'] = $this->config->get('config_quickview_background_btnwishlist');
+			$data['config_quickview_textcolor_btnwishlist'] = $this->config->get('config_quickview_textcolor_btnwishlist');
+			$data['config_quickview_background_btncompare'] = $this->config->get('config_quickview_background_btncompare');
+			$data['config_quickview_textcolor_btncompare'] = $this->config->get('config_quickview_textcolor_btncompare');
+			
+			$data['config_quickview_background_btnaddtocart_hover'] = $this->config->get('config_quickview_background_btnaddtocart_hover');
+			$data['config_quickview_textcolor_btnaddtocart_hover'] = $this->config->get('config_quickview_textcolor_btnaddtocart_hover');
+			$data['config_quickview_background_btnwishlist_hover'] = $this->config->get('config_quickview_background_btnwishlist_hover');
+			$data['config_quickview_textcolor_btnwishlist_hover'] = $this->config->get('config_quickview_textcolor_btnwishlist_hover');
+			$data['config_quickview_background_btncompare_hover'] = $this->config->get('config_quickview_background_btncompare_hover');
+			$data['config_quickview_textcolor_btncompare_hover'] = $this->config->get('config_quickview_textcolor_btncompare_hover');
+			}
+			
+			if(isset($this->request->post['quickview29'])) {
+				$data['qucikviewmodule'] = $this->load->view('extension/module/quickviewpro', $data);
+			} else {
+				$data['qucikviewmodule'] = '';
+			}
+		
+		]]>
+      </add>
+    </operation>
+  </file>
+   <file path="catalog/view/theme/*/template/product/product.tpl">
+	<operation>
+      <search>
+        <![CDATA[
+		<?php echo $content_bottom; ?>
+		]]>
+      </search>
+      <add position="before">
+        <![CDATA[
+		<?php if($qucikviewmodule) { ?>
+			<div id="quickview-my"><?php echo $qucikviewmodule;?></div>
+		<?php } ?>
+		]]>
+      </add>
+    </operation>
+  </file>
+  <file path="catalog/view/theme/*/template/extension/module/featured.tpl">
+	<operation>
+      <search>
+        <![CDATA[
+		<div class="image">
+		]]>
+      </search>
+      <add position="before">
+        <![CDATA[
+		<?php if($config_on_off_featured_quickview =='1'){?>
+	<div class="quickview"><a class="btn-quickview" onclick="quickview_open(<?php echo $product['product_id']?>);"><i class="fa fa-external-link fa-fw"></i><?php echo $config_quickview_btn_name[$lang_id]['config_quickview_btn_name']; ?></a></div>
+		<?php } ?>
+		]]>
+      </add>
+    </operation>
+  </file>
+  <file path="catalog/controller/extension/module/featured.php">
+	<operation>
+      <search>
+        <![CDATA[
+		$this->load->model('tool/image');
+		]]>
+      </search>
+      <add position="after">
+        <![CDATA[
+		$data['lang_id'] = $this->config->get('config_language_id');
+		$data['config_quickview_btn_name'] = $this->config->get('config_quickview_btn_name');
+		$data['config_on_off_featured_quickview'] = $this->config->get('config_on_off_featured_quickview');
+		]]>
+      </add>
+    </operation>
+  </file>
+  <file path="catalog/view/theme/*/template/extension/module/bestseller.tpl">
+	<operation>
+      <search>
+        <![CDATA[
+		<div class="caption">
+		]]>
+      </search>
+      <add position="before">
+        <![CDATA[
+		<?php if($config_on_off_bestseller_quickview =='1') { ?>
+			<div class="quickview"><a class="btn-quickview" onclick="quickview_open(<?php echo $product['product_id']?>);"><i class="fa fa-external-link fa-fw"></i><?php echo $config_quickview_btn_name[$lang_id]['config_quickview_btn_name']; ?></a></div>
+		<?php } ?>
+	]]>
+      </add>
+    </operation>
+  </file>
+  <file path="catalog/controller/extension/module/bestseller.php">
+	<operation>
+      <search>
+        <![CDATA[
+		$this->load->model('tool/image');
+		]]>
+      </search>
+      <add position="after">
+        <![CDATA[
+		$data['lang_id'] = $this->config->get('config_language_id');
+		$data['config_quickview_btn_name'] = $this->config->get('config_quickview_btn_name');
+		$data['config_on_off_bestseller_quickview'] = $this->config->get('config_on_off_bestseller_quickview');
+		]]>
+      </add>
+    </operation>
+  </file>
+  <file path="catalog/view/theme/*/template/extension/module/special.tpl">
+	<operation>
+      <search>
+        <![CDATA[
+		<div class="image">
+		]]>
+      </search>
+      <add position="before">
+        <![CDATA[
+		<?php if($config_on_off_special_quickview =='1') { ?>
+	<div class="quickview"><a class="btn-quickview" onclick="quickview_open(<?php echo $product['product_id']?>);"><i class="fa fa-external-link fa-fw"></i><?php echo $config_quickview_btn_name[$lang_id]['config_quickview_btn_name']; ?></a></div>
+		<?php } ?>
+		]]>
+      </add>
+    </operation>
+  </file>
+  <file path="catalog/controller/extension/module/special.php">
+	<operation>
+      <search>
+        <![CDATA[
+		$this->load->model('tool/image');
+		]]>
+      </search>
+      <add position="after">
+        <![CDATA[
+		$data['lang_id'] = $this->config->get('config_language_id');
+		$data['config_quickview_btn_name'] = $this->config->get('config_quickview_btn_name');
+		$data['config_on_off_special_quickview'] = $this->config->get('config_on_off_special_quickview');
+		]]>
+      </add>
+    </operation>
+  </file>
+  <file path="catalog/view/theme/*/template/extension/module/latest.tpl">
+	<operation>
+      <search>
+        <![CDATA[
+		<div class="image">
+		]]>
+      </search>
+      <add position="before">
+        <![CDATA[
+		<?php if($config_on_off_latest_quickview =='1') { ?>
+<div class="quickview"><a class="btn-quickview" onclick="quickview_open(<?php echo $product['product_id']?>);"><i class="fa fa-external-link fa-fw"></i><?php echo $config_quickview_btn_name[$lang_id]['config_quickview_btn_name']; ?></a></div>
+		<?php } ?>
+		]]>
+      </add>
+    </operation>
+  </file>
+  <file path="catalog/controller/extension/module/latest.php">
+	<operation>
+      <search>
+        <![CDATA[
+		$this->load->model('tool/image');
+		]]>
+      </search>
+      <add position="after">
+        <![CDATA[
+		$data['lang_id'] = $this->config->get('config_language_id');
+		$data['config_quickview_btn_name'] = $this->config->get('config_quickview_btn_name');
+		$data['config_on_off_latest_quickview'] = $this->config->get('config_on_off_latest_quickview');
+		]]>
+      </add>
+    </operation>
+  </file>
+  <file path="catalog/view/theme/*/template/product/category.tpl">
+	<operation>
+      <search>
+        <![CDATA[
+		<div class="image">
+		]]>
+      </search>
+      <add position="replace">
+        <![CDATA[
+		<div class="image">
+		<?php if($config_on_off_category_page_quickview =='1') { ?>
+	<div class="quickview"><a class="btn-quickview" onclick="quickview_open(<?php echo $product['product_id']?>);"><i class="fa fa-external-link fa-fw"></i><?php echo $config_quickview_btn_name[$lang_id]['config_quickview_btn_name']; ?></a></div>
+		<?php } ?>
+		]]>
+      </add>
+    </operation>
+  </file>
+  <file path="catalog/controller/product/category.php">
+	<operation>
+      <search>
+        <![CDATA[
+		$this->load->model('tool/image');
+		]]>
+      </search>
+      <add position="after">
+        <![CDATA[
+		$data['lang_id'] = $this->config->get('config_language_id');
+		$data['config_quickview_btn_name'] = $this->config->get('config_quickview_btn_name');
+		$data['config_on_off_category_page_quickview'] = $this->config->get('config_on_off_category_page_quickview');
+		]]>
+      </add>
+    </operation>
+  </file>
+  <file path="catalog/view/theme/*/template/product/search.tpl">
+	<operation>
+      <search>
+        <![CDATA[
+		<div class="image">
+		]]>
+      </search>
+      <add position="replace">
+        <![CDATA[
+		<div class="image">
+		<?php if($config_on_off_search_page_quickview =='1') { ?>
+	<div class="quickview"><a class="btn-quickview" onclick="quickview_open(<?php echo $product['product_id']?>);"><i class="fa fa-external-link fa-fw"></i><?php echo $config_quickview_btn_name[$lang_id]['config_quickview_btn_name']; ?></a></div>
+		<?php } ?>
+		]]>
+      </add>
+    </operation>
+  </file>
+  <file path="catalog/controller/product/search.php">
+	<operation>
+      <search>
+        <![CDATA[
+		$this->load->model('tool/image');
+		]]>
+      </search>
+      <add position="after">
+        <![CDATA[
+		$data['lang_id'] = $this->config->get('config_language_id');
+		$data['config_quickview_btn_name'] = $this->config->get('config_quickview_btn_name');
+		$data['config_on_off_search_page_quickview'] = $this->config->get('config_on_off_search_page_quickview');
+		]]>
+      </add>
+    </operation>
+  </file>
+  <file path="catalog/view/theme/*/template/product/special.tpl">
+	<operation>
+      <search>
+        <![CDATA[
+		<div class="image">
+		]]>
+      </search>
+      <add position="replace">
+        <![CDATA[
+		<div class="image">
+		<?php if($config_on_off_special_page_quickview =='1') { ?>
+	<div class="quickview"><a class="btn-quickview" onclick="quickview_open(<?php echo $product['product_id']?>);"><i class="fa fa-external-link fa-fw"></i><?php echo $config_quickview_btn_name[$lang_id]['config_quickview_btn_name']; ?></a></div>
+		<?php } ?>
+		]]>
+      </add>
+    </operation>
+  </file>
+  <file path="catalog/controller/product/special.php">
+	<operation>
+      <search>
+        <![CDATA[
+		$this->load->model('tool/image');
+		]]>
+      </search>
+      <add position="after">
+        <![CDATA[
+		$data['lang_id'] = $this->config->get('config_language_id');
+		$data['config_quickview_btn_name'] = $this->config->get('config_quickview_btn_name');
+		$data['config_on_off_special_page_quickview'] = $this->config->get('config_on_off_special_page_quickview');
+		]]>
+      </add>
+    </operation>
+  </file>
+   <file path="catalog/view/theme/*/template/product/manufacturer_info.tpl">
+	<operation>
+      <search>
+        <![CDATA[
+		<div class="image">
+		]]>
+      </search>
+      <add position="replace">
+        <![CDATA[
+		<div class="image">
+		<?php if($config_on_off_special_page_quickview =='1') { ?>
+	<div class="quickview"><a class="btn-quickview" onclick="quickview_open(<?php echo $product['product_id']?>);"><i class="fa fa-external-link fa-fw"></i><?php echo $config_quickview_btn_name[$lang_id]['config_quickview_btn_name']; ?></a></div>
+		<?php } ?>
+		]]>
+      </add>
+    </operation>
+  </file>
+  <file path="catalog/controller/product/manufacturer.php">
+	<operation>
+      <search>
+        <![CDATA[
+		$this->load->model('tool/image');
+		]]>
+      </search>
+      <add position="after">
+        <![CDATA[
+		$data['lang_id'] = $this->config->get('config_language_id');
+		$data['config_quickview_btn_name'] = $this->config->get('config_quickview_btn_name');
+		$data['config_on_off_special_page_quickview'] = $this->config->get('config_on_off_special_page_quickview');
+		]]>
+      </add>
+    </operation>
+  </file>
+</modification>

@@ -1,0 +1,31 @@
+{% block content %}
+	<div class="home-work">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-5">
+					{% for block in workblocks %}
+						<hr><span>Web Heaven</span>
+						<h2 class="title">{{ block.title }}</h2>
+						<p class="desc-top">{{ block.desc_top }}</p>
+						{% for list in worklists %}
+							<div class="step">
+								<p><strong>{{ list.strong }}</strong> {{ list.lists }}</p>
+							</div>
+						{% endfor%}
+						<p class="desc-bottom">{{ block.desc_bottom }}</p>
+					{% endfor %}
+				</div>
+				<div class="col-xl-7">
+					<div class="works"><span>НАМ<br>ДОВЕРЯЮТ</span></div>
+					<div class="image">
+						<div class="row">
+							{% for img in workimgs %}
+								<div class="col-xl-4"><div class="img-wrapper"><img class="img-fluid" src="media/{{ img.image }}" alt=""></div></div>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
