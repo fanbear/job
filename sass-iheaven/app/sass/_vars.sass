@@ -1,0 +1,33 @@
+$default-font: "roboto-example", roboto
+$accent: orange
+
+$dark: #444
+$light: #eee
+$w: #fff
+
+// брейкпоинты для адаптивной верстки
+$w-xs: 479.98px
+$w-sm: 575.98px
+$w-md: 767.98px
+$w-lg: 991.98px
+$w-xl: 1023.98px
+$w-sl: 1399.98px
+
+//миксин для быстрого использования адаптивной верстки
+@mixin bp($media) 
+  @if $media == xs 
+    @media (max-width: $w-xs) { @content; }
+  @else if $media == sm 
+    @media (max-width: $w-sm) { @content; }
+  @else if $media == md 
+    @media (max-width: $w-md) { @content; }
+  @else if $media == lg
+    @media (max-width: $w-lg) { @content; }
+  @else if $media == xl 
+    @media (max-width: $w-xl) { @content; }
+  @else if $media == sl 
+ 	 	@media (max-width: $w-sl) { @content; }
+
+// использование данного миксина  +bp(sm)
+@mixin tr($time)
+	transition: all $time ease

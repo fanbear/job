@@ -1,0 +1,2417 @@
+@import "vars"
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap')
+
+
+.invisble
+	display: none
+.imcallask-btn-mini
+	display: none
+.top_banner
+	.sale-b
+		background-image: url("/image/catalog/new-desing/iheaven.png")
+		background-size: cover
+		background-position: center
+		background-repeat: no-repeat
+		height: 60px
+		+bp(xs)
+			background-image: url("/image/catalog/new-desing/banermin.jpg")
+			height: 120px
+	+bp(xs)
+		margin-top: 50px
+	
+#black
+	position: absolute
+	top: -40px
+	left: 70px
+	z-index: 10
+	img
+		display: none
+		height: 90px
+		+bp(xs)
+			height: 50px
+	+bp(xs)
+		top: -20px
+.category-banner
+	img
+		width: 100%
+.category-wall
+	box-shadow: 0 0 5px #9d9797e0
+	margin-top: 40px
+	padding: 10px
+	.category-wall-item
+		padding: 5px
+		transition: .3s ease-out
+		img
+			margin: 0 auto
+		&:hover
+			transition: .3s ease-in
+			padding-left: 15px
+			padding-right: 15px
+			padding-top: 6px
+			padding-top: 6px
+.container
+	width: 1280px
+	+bp(lg)
+		width: auto
+	+bp(md)
+		width: auto
+	+bp(xs)
+		width: auto
+// .cf
+// 	width: 1200px
+// 	+bp(xs)
+// 		width: auto
+.hd
+	display: none
+#top
+	background-image: url('/image/catalog/new-desing/menu-up-bg.jpg')
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
+	min-height: 60px
+	height: auto
+	margin: 0
+	padding: 0
+	+bp(xs)
+		height: auto
+		display: none
+		background-image: none
+	+bp(lg)
+		height: auto
+	.top-menu
+		height: auto
+		padding: 0
+		+bp(xs)
+			text-align: center
+		a
+			display: inline-block
+			height: 60px
+			line-height: 60px
+			padding: 0 15px
+			color: white
+			font-size: 12px
+			text-transform: uppercase
+			transition: 0.4s ease-out
+			&:hover
+				transition: 0.4s ease-out
+				background: white
+				color: #1d2e46
+				text-align: center
+				padding-left: 15px
+				padding-right: 15px
+			+bp(xs)
+				display: block
+	.top-info,
+	.bottom-s
+		.social
+			text-align: right
+			min-height: 60px
+			+bp(xs)
+				text-align: center
+			a
+				margin-top: 17px
+				display: inline-block
+				background: white
+				border-radius: 50%
+				width: 24px !important
+				height: 24px
+				text-align: center
+				margin-left: 18px
+				transition: 0.6s ease-out
+				+bp(xs)
+					margin: 5px
+
+				i
+					font-size: 12px
+					padding-top: 6px
+					color: #1d2e46
+				&:hover
+					background: transparent
+					transition: 0.6s ease-out
+					i
+						color: white
+		.adress
+			min-height: 60px
+			padding: 0
+			padding-top: 10px
+			+bp(xs)
+				text-align: center
+				padding: 0
+			p
+				margin: 0
+				padding: 0
+				color: white
+				text-align: right
+.top-open
+	+bp(lg)
+		display: none
+	+bp(sm)
+		display: none
+	+bp(xs)
+		display: block
+		background: #1d2e46
+		height: 8px
+		text-align: center
+		span
+			position: relative
+			top: 8px
+			color: #1d2e46
+header
+	height: 150px
+	+bp(xs)
+		height: auto
+	.head-middle
+		margin-top: 55px
+		+bp(xs)
+			margin-top: 10px
+	#logo
+		margin-top: 4px
+		+bp(xs)
+			text-align: center
+			margin-top: 0px
+		a
+			img
+				position: absolute
+				top: -35px
+				+bp(xs)
+					display: inline !important
+					position: sticky
+					position: -webkit-sticky
+					top: 0
+	.head-middle-phone
+		margin-top: -23px
+		.head-middle-phone-item
+			position: relative
+			padding-left: 25px
+			p
+				font-size: 16px
+				font-weight: bold
+				margin: 0
+				padding: 0
+				padding-bottom: 10px
+			ul
+				padding-left: 25px
+				li
+					list-style-type: none
+					font-size: 12px
+					font-weight: 600
+					color: #666
+					a
+						color: #666
+						&:hover
+							color: #0088E8
+		.left
+			p
+				color: #d40e7f
+			ul
+				li
+					padding: 4px 0
+					&:nth-child(odd)
+						&:before
+							position: absolute
+							display: inline-block
+							content: ''
+							background-image: url('/image/catalog/new-desing/pin-pink.png')
+							width: 20px
+							height: 27px
+							left: 25px
+							top: 30px
+					&:nth-child(even)
+						&:before
+							position: absolute
+							display: inline-block
+							content: ''
+							background-image: url('/image/catalog/new-desing/phone-pink.png')
+							width: 20px
+							height: 21px
+							left: 25px
+							top: 60px
+		
+		.right
+			p
+				color: #3392df
+			ul
+				li
+					padding: 4px 0
+					&:nth-child(odd)
+						&:before
+							position: absolute
+							display: inline-block
+							content: ''
+							background-image: url('/image/catalog/new-desing/pin-blue.png')
+							width: 20px
+							height: 27px
+							left: 25px
+							top: 30px
+					&:nth-child(even)
+						&:before
+							position: absolute
+							display: inline-block
+							content: ''
+							background-image: url('/image/catalog/new-desing/phone-blue.png')
+							width: 20px
+							height: 21px
+							left: 25px
+							top: 60px
+		.head-middle-phone-delimeter
+			position: absolute
+			left: 49%
+			top: 0
+			height: 85%
+			background-color: #3392df
+			width: 2px
+		+bp(xs)
+			display: none
+	#search
+		width: 100%
+		float: right
+		+bp(xs)
+			margin-top: 10px
+			width: 100%
+		.form-control
+			border-radius: 5px 0 0 5px
+			&:focus
+				box-shadow: none
+				border: 1px solid #1d2e46
+		.input-lg
+			height: 41px
+		.btn-lg
+			padding: 7.5px 15px
+		.btn-default
+			background: #1870cd
+			border: 1px solid #1870cd
+	#live-search
+		top: 52px
+		left: 46px
+		width: 86%
+		box-shadow: none
+		border-radius: 0
+		.product-name
+			color: #1D2E46
+			font-size: 10px
+			p
+				display: none
+		.product-price
+			width: 20% !important
+		.result-text
+			background: #1D2E46
+			a
+				color: white
+	.fa-search
+		font-size: 25px
+	.cart-block
+		display: inline-flex
+		+bp(xs)
+			display: none
+		#cart
+			+bp(xs)
+				left: 0
+				button
+					background: transparent
+					border: 0
+					box-shadow: none
+			.btn-block
+				width: 40px
+				height: 40px
+				border-radius: 0
+				cursor: pointer
+			.btn-lg
+				padding: 0
+			#cart-total
+				display: inline-block
+				position: absolute
+				background: #272727
+				width: 32px
+				height: 32px
+				border-radius: 50%
+				top: -12px
+				right: -18px
+				line-height: 32px
+				text-align: center
+				font-size: 14px
+				+bp(xs)
+					top: -5px
+					right: -20px
+			.fa-shopping-cart
+				font-size: 16px
+			.btn-inverse
+				background: #1870cd
+				border-radius: 5px
+				transition: 0.4s ease-in
+				border: 0 !important
+			&:hover
+				.btn-inverse
+					background: transparent
+					transition: 0.4s ease-out
+					.fa-shopping-cart
+						color: #1D2E46
+		.login
+			border-radius: 5px
+			width: 40px
+			height: 40px
+			background: #1870cd
+			text-align: center
+			position: relative
+			cursor: pointer
+			transition: 0.4s ease-in
+			+bp(xs)
+				margin: 0 auto
+				background: transparent
+			.login-togle
+				display: none
+				margin-top: 3px
+				border-radius: 5px
+				position: absolute
+				z-index: 9999
+				width: 166px
+				background: #1870cd
+				left: -62px
+				+bp(xs)
+					width: 110px
+					left: -35px
+					border-radius: 0
+				p
+					padding: 0
+					margin: 0
+					a
+						color: white
+						&:hover
+							text-decoration: underline
+							font-weight: bold
+			.fa-sign-in
+				font-size: 14px
+				color: white
+				line-height: 40px
+				cursor: pointer
+			&:hover
+				transition: 0.4s ease-out
+				background: transparent
+				border: 1px solid #1D2E46
+				.fa-sign-in
+					color: #1D2E46 !important
+					+bp(xs)
+						color: white !important
+		.wishilis
+			border-radius: 5px
+			width: 40px
+			height: 40px
+			background: #1870cd
+			text-align: center
+			transition: 0.4s ease-in
+			cursor: pointer
+			+bp(xs)
+				margin: 0 auto
+				background: transparent
+			span
+				display: inline-block
+				position: absolute
+				background: #272727
+				width: 32px
+				height: 32px
+				border-radius: 50%
+				top: -12px
+				right: 0px
+				color: white
+				line-height: 32px
+				text-align: center
+				font-size: 14px
+			.fa-heart
+				font-size: 14px
+				color: white
+				line-height: 40px
+				cursor: pointer
+			&:hover
+				transition: 0.4s ease-out
+				background: transparent
+				border: 1px solid #1D2E46
+				.fa-heart
+					color: #1D2E46
+	#cart-block-mobile
+		display: none
+		+bp(xs)
+			display: block
+			position: fixed
+			top: 6px
+			z-index: 9999
+	.phone-open
+		border-radius: 5px
+		width: 40px
+		height: 40px
+		background: #1870cd
+		text-align: center
+		position: relative
+		cursor: pointer
+		transition: 0.4s ease-in
+		+bp(xs)
+			margin: 0 auto
+			background: transparent
+		.fa-phone-square
+			font-size: 18px
+			color: white
+			line-height: 40px
+			cursor: pointer
+	.open-mob
+		display: none
+		width: 210px
+		position: absolute
+		left: -70px
+		text-align: center
+		background: #1870cd
+		padding: 10px 0
+		a
+			color: white
+.menu
+	background-image: url('/image/catalog/new-desing/mn-bg.png')
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
+	min-height: 90px
+	height: auto
+	+bp(xs)
+		height: auto
+		min-height: auto
+		background-image: none
+	ul.megamenu > li > a img
+		height: 30px
+		+bp(xs)
+			display: none
+	.static-menu
+		.menu
+			height: auto
+	.megamenu-wrapper
+		height: 0
+		+bp(xs)
+			width: 82% !important
+			height: auto
+			background: #3392df
+		.megamenu
+			margin-top: 0
+			li
+				a
+					font-size: 12px
+					color: white
+					height: 90px
+					text-shadow: none
+					line-height: 90px
+					padding: 0 15px
+					transition: .4s ease-in
+					&:hover
+						background: #005dd1
+						color: white
+						border-bottom: 4px solid #E70363
+						transition: .2s ease-out
+					&:active
+						background: #005dd1
+						color: white
+					+bp(xs)
+						font-size: 14px
+				.active
+					background: white
+					a
+						color: #1d2e46
+		.sub-menu
+			.categories
+				.menu
+					background: transparent
+					padding-bottom: 40px
+					li
+						a
+							padding: 5px 10px
+							color: #1d2e46
+							height: 40px
+							&:hover
+								background: transparent
+								font-weight: bold !important
+								text-decoration: underline
+								color: #272727 !important
+			.link
+				img
+					padding: 25px
+	.subcategory
+		text-align: center
+		li
+			transition: 0.4s ease-in
+			a
+				text-align: center
+				color: black !important
+				font-size: 12px !important
+				height: auto !important
+				&:hover
+					background: transparent !important
+				img
+					+bp(xs)
+						width: 40px
+				p
+					color: black
+					padding: 10px 0
+			&:hover
+				box-shadow: 0 0 4px 0 lightgrey
+				border-radius: 10px
+				transition: 0.4s ease-out
+		.menu
+			background: transparent !important
+.navbar-header
+	background: #3392df
+	+bp(xs)
+		position: fixed
+		top: 0
+		z-index: 999
+		width: 100%
+	.fa-close
+		&:before
+		color: black
+	#show-megamenu
+		border-color: white
+	.navbar-toggle
+		&:focus
+			background: #d40e7f
+.icon-bar
+	background-color: white !important
+.with-sub-menu
+	&:before
+		color: white !important
+.close-menu
+	width: 50px !important
+	padding: 12px 0px 0px 0px !important
+	&:before
+		color: #1D2E46 !important
+
+//атабы акции, новинки, хиты продаж, рекомендуемые
+.tabs-head
+	p
+		text-align: center
+		font-size: 30px
+		text-transform: uppercase
+		color: #272727
+		margin: 0
+		padding: 0
+	.tab-line
+		background: #1d2e46
+		width: 95px
+		height: 2px
+.tab-content
+	min-height: 400px
+	height: auto
+	.pr-t
+		+bp(xs)
+			padding: 0 !important
+#tabs-0
+	margin-top: 90px
+	+bp(xs)
+		margin-top: 30px
+	.nav-tabs
+		border: 0
+		text-align: center
+		margin-bottom: 80px
+		+bp(xs)
+			margin-bottom: 30px
+		li
+			float: none
+			display: inline-block
+			width: 165px
+			height: 44px
+			background: #3392df
+			+bp(xs)
+				width: 118px
+			a
+				color: white
+				background: transparent
+				padding: 0
+				border: 0
+				font-size: 14px
+				font-weight: 500
+				line-height: 44px
+		.active
+			background: #d40e7f
+.latest
+	margin-top: 30px
+	margin-bottom: 30px
+	text-align: center
+#tab-latest-0
+	padding-bottom: 20px
+
+//Стикеры
+
+.sticker_rectangle .sticker_special
+	position: absolute
+	top: 50px
+	background: #c1000a
+.sticker_price0
+	height: 46px
+	width: 45px
+	div
+		display: none
+.sticker_left
+	left: 30px !important
+	top: 25px !important
+	z-index: 1
+//--------------------
+
+//Карточки
+.pr-t
+	display: grid
+// 	padding: 0
+.desk
+	display: none
+.product-layout
+	display: flex
+.product-thumb
+	border: 0
+	border: 1px solid #0318331c
+	padding-top: 25px
+	border-radius: 15px
+	transition: 0.3s ease-in
+	background: white
+	position: relative
+	left: 0
+	overflow: unset
+	.p-name
+		text-align: center
+		padding: 0
+		p
+			// padding-left: 90px
+			height: 45px
+			overflow: hidden
+			a
+				color: #1870cd
+				font-size: 14px
+				font-weight: bold
+	&:hover
+		transition: 0.3s ease-out
+		box-shadow: 0 5px 10px 1px #00000042
+		border: 0
+	.wishlist
+		padding: 0
+		padding-top: 8px
+		text-align: center
+		button
+			background: transparent !important
+			border: 0 !important
+			height: 25px
+			width: auto
+	.caption
+		min-height: auto
+		display: table
+		width: 100%
+		.price
+			padding: 15px
+	.gift
+		padding: 0
+	.image
+		margin-top: 45px
+		a
+			position: relative
+			left: -22px
+	.price-old
+		text-align: center
+		border-radius: 5px
+	.price-new
+		padding: 5px 0
+	.price, .price-new, .price-old
+		text-align: center
+		margin: 0
+		margin-top: 10px !important
+		span
+			font-size: 14px
+			color: lightgrey
+		// color: #c1000a
+		font-size: 14px
+	.price, .price-new
+		font-size: 18px
+		font-weight: bold
+		// color: #1e3048
+		color: #c1000a
+		.special_price
+			color: #c1000a
+			font-size: 18px
+			font-weight: bold
+		+bp(xs)
+			font-size: 24px
+	.price
+		display: table-cell
+		vertical-align: middle
+		+bp(xs)
+			padding-top: 25px
+	.desk-button
+		text-align: center
+		a
+
+			color: #1870cd
+			font-size: 14px
+			cursor: pointer
+			height: 44px
+			line-height: 44px
+			&:hover
+				color: #1e3048
+				font-weight: bold
+	.mt-1
+		margin-top: 30px
+	.button-cart
+		width: 140px
+		height: 44px
+		background: #d40e7f
+		text-align: center
+		color: white
+		text-transform: uppercase
+		line-height: 44px
+		border-radius: 20px
+		cursor: pointer
+		transition: 0.4s ease-out
+		+bp(xs)
+			width: 125px
+			height: 35px
+			line-height: 35px
+			margin-top: 5px
+		&:hover
+			border: 1px solid #3392df
+			color: #1e3048
+			background: transparent
+			transition: 0.4s ease-out
+		.fa-shopping-cart
+			display: none
+.text
+	padding: 20px
+	position: absolute
+	background: white
+	box-shadow: 0 0 5px 0 #5f5d5d
+	width: 268px
+	left: -120px
+	border-radius: 5px
+	height: auto
+	z-index: 3
+	top: 42px
+	display: none
+	b
+		text-align: center
+		font-size: 14px
+		font-weight: bold
+		color: black
+	p
+		margin-top: 10px
+		font-size: 13px
+	+bp(xs)
+		width: 260px
+		left: 0
+#gift
+	position: relative
+	margin-bottom: 10px
+	cursor: pointer
+	&:hover
+		.text
+			display: block
+
+#mono
+	position: relative
+	margin-bottom: 10px
+	cursor: pointer
+	&:hover
+		.text
+			display: block
+#privat
+	position: relative
+	margin-bottom: 10px
+	cursor: pointer
+	&:hover
+		.text
+			display: block
+#rasrochka
+	position: relative
+	margin-bottom: 10px
+	cursor: pointer
+	&:hover
+		.text
+			display: block
+#mastercard
+	position: relative
+	margin-bottom: 10px
+	cursor: pointer
+	&:hover
+		.text
+			display: block
+#novaya
+	position: relative
+	margin-bottom: 10px
+	cursor: pointer
+	&:hover
+		.text
+			display: block
+.label-block
+	padding: 0
+	+bp(xs)
+		padding: 15px
+.bank
+	margin-top: 15px
+	img
+		height: 50px
+		+bp(xs)
+			height: 40px
+	.text
+		left: -100px
+	#rasrochka
+		.text
+			+bp(xs)
+				left: 0
+		.text-product
+			+bp(xs)
+				left: -50px !important
+	#gift
+		.text
+			+bp(xs)
+				left: 0
+		.text-product
+			+bp(xs)
+				left: 0px !important
+	#mono
+		.text
+			+bp(xs)
+				left: -59px
+		.text-product
+			+bp(xs)
+				left: -100px !important
+	#privat
+		.text
+			+bp(xs)
+				left: -130px
+		.text-product
+			+bp(xs)
+				left: -100px !important
+	#mastercard
+		.text
+			+bp(xs)
+				left: -190px
+		.text-product
+			+bp(xs)
+				left: -100px !important
+	#novaya
+		.text
+			+bp(xs)
+				left: 0
+		.text-product
+			+bp(xs)
+				left: -100px !important
+.atr-hover
+	display: inline-block
+	border-top: 1px solid lightgrey
+	padding-top: 10px
+	width: 100%
+	b
+		color: #1e3048
+		font-size: 13px
+		margin: 0 !important
+//Категории
+// .product-layout
+// 	padding: 0
+.category-search
+	text-align: center
+	a
+		margin: 10px
+		border: 1px solid #80808045
+		height: auto
+		display: inline-block
+		width: 100%
+		border-radius: 10px
+		&:hover
+			box-shadow: 0 0 10px 0 #80808045
+		img
+			padding-top: 10px
+	p
+		width: 100%
+		height: auto
+		margin-bottom: 10px
+		text-align: center
+		color: black
+		font-size: 12px
+		font-weight: 600
+		line-height: 20px
+#content
+
+	h1
+		margin: 0
+		padding: 0
+		padding-bottom: 40px
+		+bp(xs)
+			text-align: center
+			margin: 20px 0
+	b
+		font-size: 12px
+		margin: 15px 0
+		display: inline-block
+	.pr-lg
+		display: block !important
+		padding-bottom: 15px
+		+bp(xs)
+			display: none !important
+			padding: 0
+	.pr-xs
+		display: none !important
+		+bp(xs)
+			display: block !important
+			padding-left: 10px
+			padding-right: 10px
+	.sort
+		display: none
+	.sorting
+		+bp(xs)
+			display: none
+	#input-sort
+		border: 0
+		box-shadow: none
+		width: 95%
+		float: right
+		font-size: 14px
+		color: #a9a9a9
+		cursor: pointer
+#ocfilter
+	border: 0
+	.panel-heading
+		display: none
+
+	.list-group-item
+		margin-bottom: 30px
+		padding: 0
+		border: 0
+	.ocf-option-name
+		height: 45px
+		line-height: 45px
+		text-align: left
+		color: white
+		background: #1870cd
+		padding-left: 15px
+		margin: 0
+		font-size: 16px
+		font-weight: 500
+	.arrow
+		float: right
+		position: absolute
+		top: 23px
+		right: 16px
+		cursor: pointer
+		transform: rotate(0deg)
+	.rotate
+		transform: rotate(180deg)
+	.ocf-price
+		text-align: center
+		color: black
+		font-size: 16px
+		height: 45px
+		line-height: 45px
+	.noUi-connect
+		background: #ebe9e9
+		height: 7px
+	.noUi-target
+		border: 0
+		box-shadow: none
+	.noUi-pips
+		display: none
+	.noUi-horizontal .noUi-handle
+		width: 20px
+		height: 20px
+		background: #1870cd
+		box-shadow: none
+		border: 0
+		border-radius: 7px
+		&:before
+			display: none
+		&:after
+			display: none
+	.scale
+		margin-left: 30px
+	.ocf-option-values
+		padding-top: 15px
+		padding-left: 15px
+		background: #f7f7f7
+		display: block
+		label
+			color: black
+	.ocf-option-price
+		display: block
+	.ocfilter-option label.ocf-selected
+		color: #4d719c
+	.badge
+		display: none
+	.popover-content
+		button
+			background: #1d2e46
+			color: white
+	.popover
+		.arrow
+			+bp(xs)
+				display: none !important
+.product-thumb
+	a.btn-primary
+		display: none
+//--------------------------
+
+
+// Карточка продукта
+.pr-name
+	display: block !important
+	font-size: 20px !important
+	font-weight: bold
+	color: black
+	margin-top: 0
+.att
+	margin-bottom: 25px
+	margin-top: 10px
+	+bp(xs)
+		display: none
+
+.atr
+	padding-left: 60px
+	padding-top: 10px
+	+bp(xs)
+		padding-left: 15px
+		padding-top: 40px
+	p
+		margin: 0
+.atribute-display
+	&:before
+		content: ""
+		display: inline-block
+		position: absolute
+		width: 35px
+		height: 35px
+		left: 10px
+		top: 5px
+		background-image: url('/image/catalog/new-desing/display.png')
+.atribute-memory
+	&:before
+		content: ""
+		display: inline-block
+		position: absolute
+		width: 35px
+		height: 35px
+		left: 10px
+		top: 5px
+		background-image: url('/image/catalog/new-desing/memory.png')
+.atribute-camera
+	&:before
+		content: ""
+		display: inline-block
+		position: absolute
+		width: 35px
+		height: 35px
+		left: 10px
+		top: 5px
+		background-image: url('/image/catalog/new-desing/camera.png')
+.atribute-video
+	&:before
+		content: ""
+		display: inline-block
+		position: absolute
+		width: 35px
+		height: 35px
+		left: 10px
+		top: 5px
+		background-image: url('/image/catalog/videokarta.png')
+.atribute-cp
+	&:before
+		content: ""
+		display: inline-block
+		position: absolute
+		width: 35px
+		height: 35px
+		left: 10px
+		top: 5px
+		background-image: url('/image/catalog/new-desing/proc.png')
+
+.product-info-block
+	padding-left: 50px
+	padding-bottom: 20px
+	box-shadow: 0 0 10px 1px #1d1f203b
+	border-radius: 5px
+	+bp(xs)
+		box-shadow: none
+		display: none
+	p
+		margin: 0
+	.dlr-hr
+		margin: 7px 0
+		width: 50px
+		height: 2px
+#mobile-info
+	display: none
+	+bp(xs)
+		display: block
+		padding-top: 0
+.art
+	li
+		font-size: 14px
+		color: black
+		margin: 10px 0
+		font-weight: bold
+		color: #282828
+		text-decoration: underline
+		span
+			color: #c1c1c1
+			font-size: 12px
+			text-decoration: underline
+		a
+			font-size: 14px
+			color: #1e3048
+		strong
+			text-decoration: underline
+.p_sp
+	span
+		font-size: 30px !important
+		font-weight: bold
+		color: #d40e7f
+.block-price
+
+.price-art
+	span
+		font-size: 14px
+		font-weight: bold
+	p
+		font-size: 20px
+		background: white
+		text-align: left
+		border-radius: 5px
+	p
+		margin: 2vh 0
+	#new_p
+		position: relative
+		left: -12px
+		+bp(xs)
+			left: 0
+			text-align: center
+	#old-price
+		.skidon
+			span
+				font-size: 20px
+				color: #3392df
+				text-decoration: line-through
+		+bp(xs)
+			display: block
+			text-align: center
+.procent
+	display: inline-block
+	margin-left: 10px
+	.informer
+		font-size: 12px
+		border-top: 1px solid #eee
+		border-bottom: 1px solid #eee
+		border-right: 1px solid #eee
+		border-radius: 5px
+		padding: 3px
+		height: auto
+		.t_p
+			padding: 5px 6px
+			color: white
+			background: rgb(255, 107, 0)
+
+	+bp(xs)
+		font-size: 30px !important
+		padding: 0
+.thumbnails
+	min-height: 400px
+	+bp(xs)
+		min-height: 300px
+	li
+		text-align: center
+.image-additional
+	margin: 0 !important
+	a
+		border: 0
+.img-product
+	img
+		width: 95%
+.img-carousel
+	width: 230px
+	border: 0
+	margin: 0 auto
+	margin-top: 20px
+	.owl-next
+		position: absolute
+		right: -40px
+		top: 20px
+		&:focus
+			border: 0
+			outline: none
+	.owl-prev
+		position: absolute
+		left: -40px
+		top: 20px
+		&:focus
+			border: 0
+			outline: none
+#option-carousel
+	width: 100%
+	height: auto
+	.owl-item
+		img
+			display: inline-block
+	.item
+		width: 100%
+		height: auto
+	.op_old_price
+		margin: 0
+	.procent_option
+			display: block
+			font-size: 14px
+			font-weight: bold
+	.opt-summ
+		text-align: left
+		width: 290px
+		margin: 0 auto
+		position: relative
+		bottom: -30px
+		+bp(xs)
+			bottom: 0
+			width: 100%
+			text-align: center
+	.owl-nav
+		display: block
+	.owl-next
+		position: absolute
+		right: 50px
+		top: 96px
+		+bp(xs)
+			right: -5px
+			top: 160px
+		&:focus
+			border: 0
+			outline: none
+	.owl-prev
+		position: absolute
+		left: 50px
+		top: 96px
+		+bp(xs)
+			left: -5px
+			top: 160px
+		&:focus
+			border: 0
+			outline: none
+#autorec-carousel
+	+bp(xs)
+		padding-right: 15px
+		padding-left: 15px
+	.owl-nav
+		display: block
+	.owl-next
+		position: absolute
+		right: -25px
+		top: 42%
+		+bp(xs)
+			right: -10px
+			top: 42%
+		&:focus
+			border: 0
+			outline: none
+	.owl-prev
+		position: absolute
+		left: -25px
+		top: 42%
+		+bp(xs)
+			display: none
+		&:focus
+			border: 0
+			outline: none
+.dell_right
+	padding-top: 20px
+	strong
+		font-size: 16px
+		color: #000000
+		font-family: 'Open Sans', sans-serif
+		font-weight: bold
+.delivery
+	position: relative
+	margin-left: 70px
+	p
+		margin: 0
+		color: #595959
+		b
+			margin: 0 !important
+			color: #282828 !important
+			font-size: 14px !important
+			font-family: 'Open Sans', sans-serif
+		small
+			font-size: 12px
+	.one
+		position: relative
+		padding-top: 5px
+		padding-bottom: 10px
+		&:before
+			display: block
+			position: absolute
+			content: ''
+			background-image: url('/image/catalog/new-desing/magaz.png')
+			background-size: contain
+			background-position: center
+			background-repeat: no-repeat
+			width: 55px
+			height: 55px
+			top: -2px
+			left: -70px
+	.two
+		position: relative
+		padding-top: 5px
+		padding-bottom: 10px
+		&:before
+			display: block
+			position: absolute
+			content: ''
+			background-image: url('/image/catalog/new-desing/ekspress.png')
+			background-size: contain
+			background-position: center
+			background-repeat: no-repeat
+			width: 55px
+			height: 55px
+			top: -2px
+			left: -70px
+	.three
+		position: relative
+		padding-top: 5px
+		padding-bottom: 10px
+		&:before
+			display: block
+			position: absolute
+			content: ''
+			background-image: url('/image/catalog/new-desing/novaya.png')
+			background-size: contain
+			background-position: center
+			background-repeat: no-repeat
+			width: 55px
+			height: 55px
+			top: -2px
+			left: -70px
+	.four
+		position: relative
+		padding-top: 5px
+		padding-bottom: 10px
+		&:before
+			display: block
+			position: absolute
+			content: ''
+			background-image: url('/image/catalog/new-desing/kurer.png')
+			background-size: contain
+			background-position: center
+			background-repeat: no-repeat
+			width: 55px
+			height: 55px
+			top: -2px
+			left: -70px
+
+.pay
+	position: relative
+	margin-left: 70px
+	p
+		margin: 0
+		color: #595959
+		b
+			margin: 0 !important
+			color: #282828 !important
+			font-size: 14px !important
+			font-family: 'Open Sans', sans-serif
+		small
+			font-size: 12px
+	.one
+		position: relative
+		padding-top: 5px
+		padding-bottom: 10px
+		&:before
+			display: block
+			position: absolute
+			content: ''
+			background-image: url('/image/catalog/new-desing/money.png')
+			background-size: contain
+			background-position: center
+			background-repeat: no-repeat
+			width: 55px
+			height: 55px
+			top: -2px
+			left: -70px
+.wtt
+	position: relative
+	margin-left: 70px
+	p
+		margin: 0
+		color: #595959
+		b
+			margin: 0 !important
+			color: #282828 !important
+			font-size: 14px !important
+			font-family: 'Open Sans', sans-serif
+		small
+			font-size: 12px
+			width: 80%
+			display: block
+	.one
+		position: relative
+		&:before
+			display: block
+			position: absolute
+			content: ''
+			background-image: url('/image/catalog/new-desing/back-order.png')
+			background-size: contain
+			background-position: center
+			background-repeat: no-repeat
+			width: 55px
+			height: 55px
+			top: -2px
+			left: -70px
+#button-cart
+	margin-top: 15px
+	margin-bottom: 15px
+	width: 230px
+	height: 54px
+	border-radius: 7px
+	background: #d40e7f
+	border: 0
+	padding: 0
+	font-size: 16px
+	transition: 0.3s ease-in
+	display: inline-block
+	font-weight: 600
+	box-sizing: border-box
+	+bp(xs)
+		width: 55%
+	&:hover
+		border: 1px solid #3392df
+		background: #3392df
+		transition: 0.3s ease-out
+		// color:  #1e3048
+.button-cart
+	.hidden-xs,
+	.hidden-sm,
+	.hidden-md
+		display: block !important
+.credit
+	background: white
+	width: 163px
+	height: 40px
+	line-height: 40px
+	border-radius: 20px
+	border: 0
+	transition: 0.3s ease-in
+	color: #c1000a
+	font-size: 14px
+	font-weight: bold
+	&:hover
+		box-shadow: 0 0 10px 1px #2727274a
+		transition: 0.3s ease-out
+#one-click
+	height: 54px
+	width: 54px
+	border-radius: 7px
+	line-height: 54px
+	background: #3392df
+	color: white
+	border: 0
+	box-shadow: none
+	margin-left: 13px
+	padding: 0
+	transition: 0.3s ease-in
+	outline: auto
+	&:hover
+		background: #d40e7f
+		transition: 0.3s ease-out
+#wish
+	background: transparent
+	width: 40px
+	height: 40px
+	line-height: 40px
+	color: #3392df
+	padding: 0
+	margin-left: 15px
+	border: 0
+	box-shadow: none
+	transition: 0.3s ease-in
+	border-radius: 50%
+	&:hover
+		border: 1px solid #3392df
+		transition: 0.3s ease-out
+.credit_in_mount
+	#btn-credit
+		width: 356px
+		height: 54px
+		background: #3392df
+		border-radius: 7px
+		text-align: center
+		cursor: pointer
+		line-height: 54px
+		color: white
+		font-size: 16px
+		font-weight: 600
+		box-sizing: border-box
+		transition: 0.5s ease-in
+		&:hover
+			background: transparent
+			box-sizing: border-box
+			color: #d40e7f
+			transition: 0.5s ease-out
+			border: 1px solid #d40e7f
+		+bp(xs)
+			width: 320px
+.qu
+	display: none
+#op_label
+	font-size: 18px
+	color: #232323
+	font-weight: bold
+	width: 100%
+	text-align: center
+	+bp(xs)
+		font-size: 16px
+
+.option-wrapper
+	padding: 0 15px
+	text-align: center
+	+bp(xs)
+		width: 90%
+		height: 370px
+		margin: 0 auto
+	b
+		font-size: 14px !important
+		margin: 0 !important
+		+bp(xs)
+			font-size: 10px !important
+			text-align: center
+
+	.space
+		display: inline-block
+		+bp(xs)
+			display: none
+	.o_r
+		+bp(xs)
+			display: none
+	.mob-space
+		display: none
+		+bp(xs)
+			display: inline-block
+	.op_name
+		font-size: 14px
+		color: #232323
+		+bp(xs)
+			font-size: 12px
+	img
+		margin: 0 auto
+		padding: 5px
+		border: 0
+	.option-plus
+		text-align: center
+		margin: auto auto
+		height: 220px
+		p
+			position: relative
+			top: 40%
+			font-size: 70px
+			color: #232323
+			margin: 0 auto
+			+bp(xs)
+				font-size: 36px
+		+bp(xs)
+			height: 140px
+	.b_option_price
+		text-align: center
+		padding-top: 10px
+		+bp(xs)
+			padding-top: 0
+	.option_minus
+		font-size: 35px !important
+		padding: 20px 0
+		+bp(xs)
+			font-size: 20px !important
+			padding: 10px
+	.op-price
+		margin: 5px 0
+		h2
+			font-size: 18px
+			margin: 0
+			padding: 0
+			font-weight: bold
+			color: #1e3048
+		p
+			height: 40px
+			overflow: hidden
+	.line
+		height: 1px !important
+		color: lightgrey
+		margin: 0 auto
+		width: 80%
+	.option-button
+		text-align: center
+		position: absolute
+		bottom: -20px
+		width: 320px
+		height: 50px
+		border-radius: 7px
+		background: #d40e7f
+		color: white
+		margin: 5px auto
+		line-height: 50px
+		+bp(xs)
+			position: unset
+			width: 90%
+			bottom: -15px
+	.option-summ
+		height: 220px
+		text-align: center
+		+bp(xs)
+			height: 130px
+			text-align: center
+.button-refresh
+	display: none
+	color: #c1000a
+	font-size: 30px !important
+	font-weight: bold !important
+	cursor: pointer
+	position: relative
+	top: 5px
+	left: 15px
+.button-cpl
+	display: none
+#option-carousel
+	.radio
+		input[type="radio"]
+			opacity: 0
+		label
+			padding-left: 0
+	.radio
+		input[type="radio"]
+			&:checked
+				+ .option-wrapper
+					.option-button
+						background: #3392df !important
+
+.op-carousel
+	// background-color: #f8f9fa
+	padding-top: 20px
+	border: 2px solid #f8f9fa
+	border-radius: 7px
+.product-tabs
+	border: 0
+	li
+		border-bottom: 1px solid lightgrey
+		margin-right: 120px
+		width: 130px
+		a
+			font-size: 14px
+			color: #464646 !important
+			padding: 10px 0
+			font-weight: 600
+			&:hover
+				background: transparent
+				color: #1d2e46 !important
+				border: 0
+	.active
+		border-bottom: 1px solid #1d2e46
+		a
+			border: 0 !important
+#tab-specification
+	padding-left: 80px
+	padding-right: 80px
+	margin-bottom: 40px
+	margin-top: 40px
+	border-radius: 7px
+	background: #f8f9fa
+	+bp(xs)
+		padding: 15px
+	.atr-wrapper
+		background: white
+		padding: 30px
+
+	.dotted
+		border-bottom: 1px dotted rgba(0,0,0,.11)
+		padding-left: 0
+	p
+		font-size: 30px
+		font-weight: 600
+		color: #464646
+		padding: 20px 0
+		text-align: center
+		+bp(xs)
+			font-size: 20px
+	.group-name
+		margin-bottom: 20px
+	.atr-block
+		margin-top: 15px
+		border-bottom: 1px solid lightgrey
+		p
+			font-size: 14px
+			margin-top: 0
+			padding: 0
+			padding-left: 15px
+			text-align: left
+			font-family: Roboto, sans-serif
+			font-weight: 500
+		strong
+			color: black
+			font-size: 16px
+			font-weight: 500
+			margin: 0 0 24px
+			display: inline
+			font-family: Roboto, sans-serif
+
+	.table-bordered
+		border: 0
+	font-family: OpenSans
+	//Отзывы
+.rev
+	font-size: 30px
+	color: #464646
+	font-weight: 600
+	text-align: center
+	padding: 20px 0
+
+#tab-review
+	margin-top: 60px
+#review
+	box-shadow: 0 0 10px 2px #00000038
+	padding: 40px
+	border-radius: 8px
+#form-review
+	.pull-right
+		+bp(xs)
+			float: none !important
+			margin: 0 auto
+	.h4
+		font-size: 30px
+		color: #464646
+		font-weight: 500
+		text-align: center
+		padding: 20px 0
+#button-review
+	height: 40px
+	border-radius: 20px
+	line-height: 40px
+	background: #3392df
+	padding: 0
+	width: 296px
+	text-align: center
+	transition: 0.3s ease-in
+	+bp(xs)
+		width: 100%
+	&:hover
+		background: transparent
+		border: 1px solid #1d2e46
+		color: #1d2e46
+		transition: 0.3s ease-out
+.table-striped
+	border: 0
+	border-bottom: 1px solid lightgrey
+	tr
+		background: transparent !important
+	td
+		border: 0 !important
+	strong
+		padding-left: 15px
+		font-size: 16px
+		color: #464646
+	p
+		font-size: 14px
+		color: #464646
+		font-weight: 600
+	.date-r
+		margin-top: 10px
+		color: #d4d4d4
+		font-size: 12px
+	.fa-stack
+		height: 12px
+		width: 12px
+		font-size: 12px !important
+		.fa
+			height: 12px
+			width: 12px
+			font-size: 12px !important
+			color: #4d719c
+#tab-description
+	margin-bottom: 40px
+	padding-top: 30px
+	margin-top: 30px
+	border-top: 1px solid lightgrey
+	.d
+		height: auto
+		overflow: hidden
+		margin-bottom: 10px
+	p
+		font-size: 14px
+		font-weight: bold
+		color: #1e3048
+	#d-open
+		text-align: right
+		color: #1e3048
+		font-size: 16px
+		font-weight: bold
+		cursor: pointer
+		&:hover
+			text-decoration: underline
+.btn-product-group
+	a.btn-primary
+		display: none
+//------------------------
+//Хлебный крошки
+.breadcrumb
+	background: transparent
+	border: 0
+	margin-top: 40px
+	margin-bottom: 40px
+	+bp(xs)
+		display: none
+	li
+		color: #9f9f9f
+		padding: 0 10px
+		a
+			color: #9f9f9f
+		&:after
+			width: 8px
+			height: 8px
+			top: 5px
+//-------------------------
+
+
+//Корзина popap
+.product-table-body-row
+	.options
+		text-align: left
+		span
+			color: #CF2327 !important
+			font-weight: bold !important
+			font-size: 12px !important
+	.name
+		.name-right
+			padding: 10px 0 !important
+	.inner
+		button
+			background: #3392df !important
+			color: white !important
+.modal-footer
+	.close-button-bottom
+		background: #3392df !important
+	.go-button-bottom
+		background: #d40e7f !important
+//------------------------
+
+
+//Заявка popap
+.modal
+	button
+		background: #d40e7f
+		color: white
+	.close
+		background: transparent
+		color: black
+//----------------------------------
+
+
+//Оформления заказ
+.order-title
+	text-align: center
+	font-size: 30px
+	color: #272727
+	margin-bottom: 80px
+	+bp(xs)
+		font-size: 24px
+		margin-bottom: 30px
+.checkout-heading
+	display: none
+.row-customer_firstname,
+.row-customer_lastname,
+.row-customer_email,
+.row-customer_telephone
+	label
+		display: none !important
+.order-image
+	text-align: center
+	img
+		+bp(xs)
+			width: 100%
+			height: 100%
+.order-wrapper
+	border-left: 1px solid lightgrey
+.order-line
+	width: 80%
+	height: 1px
+	background: lightgrey
+	margin: 0 auto
+	border: 0
+.button-block
+	text-align: right
+	.btn-danger
+		background: transparent
+		position: relative
+		right: 0
+		border: 0
+		box-shadow: none
+		transition: 0.3s ease-in
+		i
+			color: #d40e7f
+			font-size: 20px
+		&:hover
+			background: #3392df
+			i
+				color: white
+			transition: 0.3s ease-out
+
+.order-name
+	text-align: center
+	width: 80%
+	margin: 10px auto
+	a
+		font-size: 16px
+		text-transform: uppercase
+		font-weight: bold
+		color: #3392df
+.order-price
+	text-align: center
+	color: #d40e7f
+	font-size: 20px
+	font-weight: bold
+	text-transform: uppercase
+	margin: 0
+	padding: 10px
+.options
+	text-align: center
+	padding: 10px 0
+	small
+		color: #d40e7f
+		font-size: 14px
+		font-weight: bold
+#total_sub_total,
+#total_shipping
+	display: none
+#total_total
+	background: transparent
+	border: 0
+	text-align: left
+	width: 100%
+	padding: 25px
+	margin-top: 15px
+	span
+		text-align: left
+		font-size: 20px
+		color: #3392df
+		font-weight: bold
+		+bp(xs)
+			text-align: left
+			border-bottom: 0
+			font-size: 14px
+			padding-bottom: 10px
+	p
+		text-align: left
+		font-size: 20px
+		color: #1d2e46
+		font-weight: bold
+		+bp(xs)
+			text-align: center
+			border-bottom: 1px solid lightgrey
+			padding-bottom: 10px
+	.simplecheckout-cart-total-value
+		font-size: 30px
+		color: #d40e7f
+		font-weight: bold
+		float: right
+		+bp(xs)
+			padding: 0
+			text-align: center
+			display: block
+#buttons
+	text-align: left
+	padding: 0
+	.simplecheckout-button-right
+		float: none
+		text-align: left
+		#simplecheckout_button_confirm,
+		#button-confirm
+			background: #d40e7f
+			height: 40px
+			width: 234px
+			line-height: 40px
+			border: 0
+			border-radius: 0
+			padding: 0
+			text-align: center
+			+bp(xs)
+				width: 100%
+.row-shipping_field20
+	label
+		display: none !important
+#simplecheckout_payment
+	width: 65%
+	+bp(xs)
+		width: 100%
+	.panel-heading
+		display: block
+		background: transparent
+		border: 0
+		color: black
+		font-size: 14px
+		font-weight: bold
+		padding: 0
+#simplecheckout_comment
+	width: 65%
+	+bp(xs)
+		width: 100%
+.radio
+	label
+		font-size: 14px !important
+		font-family: sans-serif
+#simplecheckout_customer
+	input
+		background: #f5f5f5
+		&:focus
+			box-shadow: none
+			border: 1px solid #1e3048
+
+.simplecheckout-block-content
+	label
+		color: #1e3048
+	select
+		background: #f5f5f5
+//-------------------------
+// Новости
+.news-title
+	color: #272727
+	font-size: 30px
+	text-align: center
+	margin-top: 70px
+	margin-bottom: 70px
+	+bp(xs)
+		margin: 30px 0
+	hr
+		background: #1d2e46
+		width: 95px
+		height: 2px
+#news
+	background: #f5f5f5
+	padding-bottom: 50px
+	.product-thumb
+		padding: 0
+		.image
+			margin: 0
+		.caption
+			p
+				margin: 10px 0
+			a
+				font-size: 16px
+				color: black
+				font-weight: 600
+				text-transform: uppercase
+		.button-group
+			button
+				width: 100%
+				background: #272727
+				color: white
+				&:hover
+					background: #1d2e46
+// ------------------------
+
+//Лучшие предложения
+
+.timer-title
+	border-top: 2px solid #1d2e46
+	color: #272727
+	font-size: 30px
+	text-align: center
+	padding-top: 60px
+	margin-bottom: 60px
+	+bp(xs)
+		padding-top: 30px
+		margin-bottom: 30px
+		font-size: 24px
+	hr
+		background: #1d2e46
+		width: 95px
+		height: 2px
+.timer
+	position: relative
+	z-index: 2
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(26,42,64,1)), color-stop(100%, rgba(40,63,90,1)))
+	background: -moz-linear-gradient(left, rgba(26,42,64,1) 0%, rgba(40,63,90,1) 100%)
+	background: -webkit-linear-gradient(left, rgba(26,42,64,1) 0%, rgba(40,63,90,1) 100%)
+	background: -o-linear-gradient(left, rgba(26,42,64,1) 0%, rgba(40,63,90,1) 100%)
+	background: -ms-linear-gradient(left, rgba(26,42,64,1) 0%, rgba(40,63,90,1) 100%)
+	background: linear-gradient(to right, rgba(26,42,64,1) 0%, rgba(40,63,90,1) 100%)
+	border-radius: 20px
+	padding-bottom: 10px
+	p
+		color: white
+		font-size: 16px
+		text-transform: uppercase
+		font-weight: 600
+		text-align: center
+		padding-top: 15px
+		padding-bottom: 15px
+		margin: 0
+	.dat
+		padding: 10px 0
+		background: white
+		small
+			font-size: 12px
+			font-weight: 600
+			width: 100%
+			display: block
+			color: white
+			text-align: center
+			color: #c1000a
+		strong
+			font-size: 18px
+			color: white
+			font-weight: bold
+			text-transform: uppercase
+			text-align: center
+			margin: 15px 0
+			display: block
+			color: #c1000a
+	.button
+		margin-top: 30px
+		a
+			width: 230px
+			height: 40px
+			margin: 0 auto
+			display: block
+			background: white
+			border-radius: 20px
+			line-height: 38px
+			color: #1d2e46
+			font-size: 12px
+			font-weight: 600
+			text-align: center
+			cursor: pointer
+			border: 1px solid white
+			box-sizing: border-box
+			&:hover
+				background: transparent
+				border: 1px solid white
+				color: white
+	.timer-text
+		p
+			margin-top: 15px
+			font-size: 11px
+			font-weight: 400
+			text-transform: unset
+			text-align: left
+			padding: 10px 20px
+			color: white
+#best-carousel
+	z-index: 1
+	+bp(xs)
+		margin-top: 20px
+	.owl-nav
+		display: block
+	.owl-prev
+		display: none
+	.owl-next
+		position: absolute
+		top: 42%
+		right: -25px
+//------------------------
+
+//Авторекумендуемые
+.auto-f
+	.p-name
+		p
+			height: 45px
+			padding: 0
+			text-align: center
+			+bp(xs)
+				padding: 0 30px
+	.price-old
+		color: #c1000a
+//------------------------
+
+// Обратный звонок
+
+.imcallask-form-container
+	.modal-header
+		text-align: center
+		font-size: 14px
+		color: #1e3048
+		font-weight: 600
+	.buttons
+		button
+			background: #1e3048
+			color: white
+			border: 0
+//-----------------------
+//Футер
+footer
+	background-image: url('/image/catalog/new-desing/footer-bg.jpg')
+	background-size: cover
+	background-position: center
+	min-height: 400px
+	height: auto
+	padding-top: 78px
+	padding-bottom: 70px
+	+bp(xs)
+		background-image: none
+		background-color: #3392df
+		padding-top: 30px
+		padding-bottom: 30px
+	.f-logo
+		display: block
+		+bp(xs)
+			text-align: center
+	.f-text
+		font-size: 12px
+		color: white
+		max-width: 310px
+		width: auto
+	.social-bottom
+		text-align: left
+		padding-left: 10px
+		margin-top: 25px
+		+bp(xs)
+			text-align: center
+			margin-top: 20px
+			padding-bottom: 20px
+			border-bottom: 1px solid lightgrey
+		a
+			display: inline-block
+			background: white
+			border-radius: 50%
+			width: 30px !important
+			height: 30px
+			text-align: center
+			margin-right: 18px
+			transition: 0.6s ease-out
+			i
+				font-size: 16px
+				padding-top: 7px
+				color: #1870cd
+			&:hover
+				background: transparent
+				transition: 0.6s ease-out
+				i
+					color: white
+	.f-menu
+		padding-left: 30%
+		+bp(xs)
+			padding: 0
+			margin-top: 20px
+		p
+			color: white
+			font-size: 18px
+			margin-bottom: 30px
+		a
+			display: block
+			color: white
+			font-size: 12px
+			margin-bottom: 10px
+			&:hover
+				text-decoration: underline
+	.shop-info
+		padding-left: 30%
+		+bp(xs)
+			border-top: 1px solid lightgrey
+			padding: 0
+			p
+				padding-top: 20px
+				text-align: left
+		p
+			margin-bottom: 30px
+			font-size: 18px
+			color: white
+		.f-info
+			p
+				margin: 10px 0
+				font-size: 14px
+				color: white
+				+bp(xs)
+					font-size: 12px
+					text-align: left
+					padding: 5px 0
+
+		.a
+			p
+				&:before
+					display: inline-block
+					position: relative
+					margin-right: 15px
+					content: ''
+					background-image: url('/image/catalog/footer-img/f-adres.png')
+					width: 15px
+					height: 21px
+					position: relative
+					top: 4px
+		.b
+			p
+				padding-left: 29px
+			.first
+				padding-left: 0
+				&:before
+					display: inline-block
+					position: relative
+					margin-right: 8px
+					content: ''
+					background-image: url('/image/catalog/footer-img/f-clock.png')
+					width: 21px
+					height: 21px
+					position: relative
+					top: 4px
+		.c
+			p
+				padding-left: 29px
+		.d
+			p
+				padding-left: 29px
+
+//--------------------
+.quantity
+	width: 160px
+	margin: 10px auto
+
+	.form-control
+		text-align: center
+	button
+		background: #1870cd !important
+		border-color: #1870cd !important
+//Menu_hover_img_and_text
+.Samsung_text,
+.Samsung_bg,
+.Apple_bg,
+
+	+bp(xs)
+		display: none
+.mobile-info-block
+	ul
+		li
+			list-style: none
+			width: 50%
+			color: #1d2e46
+			font-size: 14px
+			span
+				color: lightgrey
+	display: none
+	+bp(xs)
+		display: block
+	+bp(md)
+		display: block
+.ocfilter-mobile-handle
+	top: 40% !important
+	button
+		height: 60px
+		width: 25px
+		padding: 2px
+		border: 0
+		background: #c1000a
+		&:active
+			background: #c1000a
+		&:focus
+			background: #c1000a
+		&:hover
+			background: #c1000a
+	.active
+		background: #c1000a
+		height: 60px
+		width: 40px
+		border-radius: 15px
+		&:active
+			background: #c1000a
+		&:focus
+			background: #c1000a
+			outline: 0
+		&:hover
+			background: #c1000a
+		.fa-times-circle
+			font-size: 20px
+.well
+	.btn-primary
+		background: #1870cd
+#simpleregister_button_confirm
+	background: #1870cd
+.remove-megamenu
+	color: white !important
+#remove-megamenu
+	&:before
+		color: white
