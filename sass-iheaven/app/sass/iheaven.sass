@@ -8,17 +8,17 @@
 	display: none
 .top_banner
 	.sale-b
-		background-image: url("/image/catalog/new-desing/iheaven.png")
+		background-image: url("/image/catalog/new-desing/iheaven-july.png")
 		background-size: cover
 		background-position: center
 		background-repeat: no-repeat
 		height: 60px
 		+bp(xs)
-			background-image: url("/image/catalog/new-desing/banermin.jpg")
+			background-image: url("/image/catalog/new-desing/iheaven-mob-july.png")
 			height: 120px
 	+bp(xs)
 		margin-top: 50px
-	
+
 #black
 	position: absolute
 	top: -40px
@@ -226,7 +226,7 @@ header
 							height: 21px
 							left: 25px
 							top: 60px
-		
+
 		.right
 			p
 				color: #3392df
@@ -1175,6 +1175,7 @@ header
 		+bp(xs)
 			left: 0
 			text-align: center
+			margin-top: 30px
 	#old-price
 		.skidon
 			span
@@ -2415,3 +2416,63 @@ footer
 #remove-megamenu
 	&:before
 		color: white
+
+.link-option-item
+	display: inline-flex
+	.view0_product
+		display: inline-flex
+		box-shadow: 0 0 4px 0px lightgrey
+		border-radius: 4px
+		padding: 4px
+		border: 1px solid black
+		img
+			width: 24px
+			height: 24px
+	.text-center
+		font-size: 16px
+		font-weight: bold
+
+.view0_link
+	display: inline-flex
+	box-shadow: 0 0 4px 0px lightgrey
+	border-radius: 4px
+	padding: 4px
+	img
+		width: 24px
+		height: 24px
+.view1_link
+	height: 50px
+
+.gift-wrapper
+	p
+		+bp(xs)
+			font-size: medium
+
+.iphone-gift
+	display: none
+	+bp(xs)
+		display: none
+.iphone-gift_mob
+	display: none
+	+bp(xs)
+		display: none
+.category-prc-table
+	h2
+		font-weight: 600
+		font-size: 16px
+		line-height: 20px
+		display: inline
+	table
+		width: 100%
+		thead
+			font-weight: bold
+		tr	
+			td
+				padding: 10px 5px 10px 10px
+				border: 1px solid #f0f0f0
+				font-size: 14px
+				color: #666
+	+bp(xs)
+		td
+			&:nth-child(1)
+				width: 70%
