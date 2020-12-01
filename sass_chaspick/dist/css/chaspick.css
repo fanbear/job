@@ -3,20 +3,20 @@
   display: none; }
 
 .top_banner .sale-b {
-  background-image: url("/image/catalog/banner/chaspik.jpg");
+  background-image: url("/image/catalog/banner/black-friday.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 60px; }
+  height: 70px; }
   @media (max-width: 479.98px) {
     .top_banner .sale-b {
-      background-image: url("/image/catalog/banner/chaspik_mob.jpg");
+      background-image: url("/image/catalog/banner/black-friday-mob.png");
       height: 150px;
       background-size: contain; } }
 
 @media (max-width: 479.98px) {
   .top_banner {
-    margin-top: 20px; } }
+    margin-top: 26px; } }
 
 #black {
   position: absolute;
@@ -2119,6 +2119,10 @@ header {
   width: 100%;
   padding: 25px;
   margin-top: 15px; }
+  @media (max-width: 479.98px) {
+    #total_total {
+      display: flex;
+      flex-direction: column; } }
   #total_total span {
     text-align: left;
     font-size: 20px;
@@ -2127,7 +2131,7 @@ header {
     @media (max-width: 479.98px) {
       #total_total span {
         text-align: center;
-        border-bottom: 1px solid lightgrey;
+        border-bottom: 0;
         padding-bottom: 10px; } }
   #total_total p {
     text-align: left;
@@ -2137,7 +2141,9 @@ header {
     @media (max-width: 479.98px) {
       #total_total p {
         text-align: center;
-        border-bottom: 1px solid lightgrey;
+        border-bottom: 0;
+        display: block;
+        width: 100%;
         padding-bottom: 10px; } }
   #total_total .simplecheckout-cart-total-value {
     font-size: 30px;
