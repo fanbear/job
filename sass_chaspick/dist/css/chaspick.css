@@ -3,14 +3,14 @@
   display: none; }
 
 .top_banner .sale-b {
-  background-image: url("/image/catalog/banner/black-friday.png");
+  background-image: url("/image/catalog/banner/winter-discont.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 70px; }
+  height: 50px; }
   @media (max-width: 479.98px) {
     .top_banner .sale-b {
-      background-image: url("/image/catalog/banner/black-friday-mob.png");
+      background-image: url("/image/catalog/banner/winter-discont-mob.png");
       height: 150px;
       background-size: contain; } }
 
@@ -1261,7 +1261,7 @@ header {
       text-align: center; } }
 
 .price-art #old-price .skidon span {
-  font-size: 20px;
+  font-size: 18px;
   color: #ee2325;
   text-decoration: line-through; }
 
@@ -1662,7 +1662,7 @@ header {
     transition: 0.3s ease-out; }
 
 .credit_in_mount #btn-credit {
-  width: 356px;
+  width: auto;
   height: 54px;
   background: #1e3048;
   border-radius: 7px;
